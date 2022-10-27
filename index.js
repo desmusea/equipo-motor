@@ -41,10 +41,7 @@ const createEpisode = () => {
   startSentence.innerText = `${randomStart} `;
   endSentence.innerText = `${randomEnd} `;
   textNode0.innerHTML = randomExp;
-  console.log({ sentence1 });
   textNode1.innerHTML = sentence1;
-  console.log({ sentence1 });
-
   textNode2.innerHTML = sentence2;
   textNode3.innerHTML = sentence3;
 };
@@ -66,14 +63,25 @@ const resetText = () => {
   textNode3.innerHTML = '';
 };
 
+const removeWord = (word) => {
+  selectedWords = selectedWords.filter((w) => w !== word);
+  const currentNode = document.getElementById(word);
+  currentNode.classList.remove('red');
+};
+
+const selectWord = (word) =>
+  selectedWords.includes(word) ? removeWord(word) : selectedWords.push(word);
+
 const addWord = (word) => {
   const currentWord = document.getElementById(word);
   currentWord.classList += ' red';
   if (selectedWords.length < 2) {
-    selectedWords.push(word);
+    selectWord(word);
   } else if (selectedWords.length === 2) {
-    selectedWords.push(word);
-    createEpisode();
+    selectWord(word);
+    if (selectedWords.length === 3) {
+      createEpisode();
+    }
   } else if (selectedWords.length === 3) {
     const selectedNodes = document.querySelectorAll('.red');
     selectedNodes.forEach((node) => node.classList.remove('red'));
