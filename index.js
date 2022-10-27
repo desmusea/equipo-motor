@@ -47,7 +47,17 @@ const createEpisode = () => {
   textNode1.innerHTML = sentence1;
   textNode2.innerHTML = sentence2;
   textNode3.innerHTML = sentence3;
-  title.innerHTML = `Episodio 1. <span class="episodeName"> ${episodeName}<span> <span class="authorsName">${authorsName}<span>`;
+  const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
+  const authorsNameNode = ` <span class="authorsName">${authorsName}<span>`;
+
+  title.innerHTML = `Episodio 1.`;
+
+  if (episodeName) {
+    title.innerHTML += episodeNameNode;
+  }
+  if (authorsName) {
+    title.innerHTML += authorsNameNode;
+  }
 };
 
 const addLink = (sentence, url, key) => {
@@ -65,6 +75,7 @@ const resetText = () => {
   textNode1.innerHTML = '';
   textNode2.innerHTML = '';
   textNode3.innerHTML = '';
+  title.innerHTML = '';
 };
 
 const removeWord = (word) => {
@@ -108,7 +119,7 @@ const createWordsNodes = () => {
   });
 };
 
-const setAuthorsName = (name) => (authorsName = `${name}. `);
-const setEpisodeName = (name) => (episodeName = `${name}. `);
+const setAuthorsName = (name) => (authorsName = name ? `${name}. ` : '');
+const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 createWordsNodes();
