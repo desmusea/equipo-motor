@@ -50,6 +50,7 @@ const data = {
   ],
   experiences: [
     'Encuentro un grupo de personas bailando frente a una escultura.',
+    'Sigo un camino de pintura azul a lo largo de unas escaleras.',
     'En el suelo, encuentro un cromo cuadrado con un trozo de mapa.',
     'En el suelo, encuentro un cromo cuadrado con la imagen de un barco.',
     'En una de las salas, el suelo está marcado con cintas de colores que unen las obras entre sí.',
@@ -66,7 +67,7 @@ const data = {
     'Atravieso varias salas sacando fotografías a los círculos que encuentro en las obras.',
     'Atravieso varias salas sacando fotografías a las líneas que encuentro en las obras.',
     'Observo una bandera de colores serpentear a lo lejos.',
-    'Alguien ha metido un barco de papel en el cajetín con las hojas de sala.',
+    'Alguien ha metido un barco de papel en un cajetín con las hojas de sala.',
     'En el cajetín con las hojas de sala, encuentro una intervenida con dibujos.',
   ],
   words: {
@@ -82,6 +83,11 @@ const data = {
           'En las pinturas de Carmen Laffón, las salinas parecen detenidas en el tiempo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/sal-6',
         key: 'pinturas',
+      },
+      {
+        sentence: 'Un enorme metrónomo marca el tiempo al final de un pasillo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/indestructible-object-objeto-indestructible',
+        key: 'metrónomo',
       },
     ],
     TERRITORIO: [
@@ -132,6 +138,12 @@ const data = {
           'Me subo a un andamio a observar las identidades de la obra Aparatoángel de Sonia Abián.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/aparatoangel',
         key: 'Aparatoángel',
+      },
+      {
+        sentence:
+          'Observo los números identificativos que cuelgan del cuello de los Yanomami fotografiados por Claudia Andujar.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/vertical-9',
+        key: 'fotografiados',
       },
     ],
     COLONIALISMO: [
@@ -199,14 +211,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-que-terra-era-redonda-e-girava-sobre-seu-proprio-eixo-libro-creacion',
         key: 'Libro de la Creación',
       },
-      [
-        {
-          sentence:
-            'Me detengo para escudriñar con curiosidad el mapa de Sevilla intervenido por Constant.',
-          url: 'https://www.museoreinasofia.es/coleccion/obra/new-babylonsevilla-triana-groep-nueva-babiloniasevilla-grupo-triana',
-          key: 'mapa de Sevilla',
-        },
-      ],
+      {
+        sentence:
+          'Observo el círculo central de la rueda de David Bestué, hecha con escoria de Valdemingómez.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/rueda-escoria-valdemingomez',
+        key: 'círculo central',
+      },
     ],
     REPETICIÓN: [
       {
@@ -219,9 +229,21 @@ const data = {
     MAPA: [
       {
         sentence:
-          'Observo con atención las pequeñas imágenes de uno de los tapices de TXT de Ana Torfs, centrándome en lo que parece un pequeño mapa.',
+          'Observo con atención las imágenes de uno de los tapices de TXT de Ana Torfs, centrándome en lo que parece un pequeño mapa.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/txt-engine-wandering-words-txt-motor-palabras-errantes-0',
         key: 'TXT',
+      },
+      {
+        sentence:
+          'Sigo con la mirada los elementos que se conectan entre sí sobre el mapa de Valencia de Rogelio López Cuenca.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/mapa-valencia-polivalencias-altercartografia-critica-ciudad',
+        key: 'mapa de Valencia',
+      },
+      {
+        sentence:
+          'Me detengo para escudriñar con curiosidad el mapa de Sevilla intervenido por Constant.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/new-babylonsevilla-triana-groep-nueva-babiloniasevilla-grupo-triana',
+        key: 'mapa de Sevilla',
       },
     ],
     TECNOLOGÍA: [
@@ -274,7 +296,6 @@ const data = {
         key: 'una escultura',
       },
     ],
-
     MIEDO: [
       {
         sentence:
@@ -283,16 +304,26 @@ const data = {
         key: 'esculturas humanas',
       },
     ],
-    ESPACIO: [{ sentence: '', url: '', key: '' }],
     FORMAS: [
       {
         sentence:
-          'Las formas de una pintura de Juan Gris me producen curiosidad.',
+          'Las formas de una pintura de Juan Gris me producen curiosidad',
         url: 'https://www.museoreinasofia.es/coleccion/obra/table-du-musicien-mesa-musico',
         key: 'una pintura',
       },
+      {
+        sentence:
+          'En un dibujo de Pepe Espaliú, unas muletas se entrelazan en formas indistinguibles.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sin-titulo-359',
+        key: 'dibujo',
+      },
+      {
+        sentence:
+          'Observo las sombras que producen en la pared las formas de una escultura de Gego.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/tronco-decagonal-no-4',
+        key: 'escultura',
+      },
     ],
-
     TERTULIA: [
       {
         sentence:
@@ -336,7 +367,7 @@ const data = {
     CASA: [
       {
         sentence:
-          'Me pregunto cómo quedaría la butaca de Josep Torres Clavé en el salón de mi casa',
+          'Me pregunto cómo quedaría la butaca de Josep Torres Clavé en el salón de mi casa.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/butaca',
         key: 'butaca',
       },
@@ -386,6 +417,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/personnages-et-oiseaux-devant-soleil-personajes-pajaros-delante-sol',
         key: 'pintura',
       },
+      {
+        sentence:
+          'La maqueta del Pabellón de España en la Exposición Internacional de París de 1937 parece una casa de muñecas.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/pabellon-espana-exposicion-internacional-paris-1937',
+        key: 'maqueta',
+      },
     ],
     CAMINO: [
       {
@@ -426,8 +463,13 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/not-all-moves-red-tangram-4-7-no-todo-que-mueve-es-rojo-tangram-no-4-no-7',
         key: 'bandera',
       },
+      {
+        sentence:
+          'Una tela de Maja Bajevic cuelga de una de las salas como una especie de bandera.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/arts-crafts-and-facts-100-productivity-77-total-compensationinflation-30-total',
+        key: 'tela',
+      },
     ],
-
     ARQUITECTURA: [
       {
         sentence:
@@ -463,6 +505,26 @@ const data = {
           'Las alegres mujeres de una pintura de Maruja Mallo me hacen pensar en mi mejor amiga.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
         key: 'una pintura',
+      },
+      {
+        sentence:
+          'Me conmueve la amistad de la fotografía de Las dos Fridas de Las Yeguas del Apocalipsis.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
+        key: 'Las dos Fridas',
+      },
+    ],
+    MEMORIA: [
+      {
+        sentence:
+          'La obra Viñedo y Pájaros de Miguel Prieto me despierta lejanos recuerdos de mi pueblo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/vinedo-pajaros',
+        key: 'Viñedo y Pájaros',
+      },
+      {
+        sentence:
+          'Me conmueve la amistad de la fotografía de Las dos Fridas de Las Yeguas del Apocalipsis.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
+        key: 'Las dos Fridas',
       },
     ],
   },
