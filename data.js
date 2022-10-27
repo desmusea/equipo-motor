@@ -172,7 +172,7 @@ const data = {
         key: 'instalación de Ines Doujak',
       },
     ],
-    LINEAS: [
+    LÍNEAS: [
       {
         sentence:
           'Saco una fotografía de las serpenteantes líneas de Pájaros en el espacio de Joan Miró.',
@@ -208,7 +208,7 @@ const data = {
         },
       ],
     ],
-    REPETICION: [
+    REPETICIÓN: [
       {
         sentence:
           'Atiendo el vídeo Una y otra vez de Sara Ramo, mirando con sorpresa los personajes que van apareciendo.',
@@ -373,7 +373,7 @@ const data = {
         key: 'Adán y Eva',
       },
     ],
-    EXPOSICION: [
+    EXPOSICIÓN: [
       {
         sentence:
           'Me detengo junto a la Dama oferente de Pablo Picasso, que se expuso en el Pabellón de España de la Exposición Internacional de París de 1937.',

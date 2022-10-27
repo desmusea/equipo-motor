@@ -11,22 +11,22 @@
 
 <body>
     <article>
-        <p>
+        <div class="field">
             <label for="name">
-                <h3>¿Cuál es tu nombre?</h3>
+                <h4>Escribe tu nombre:</h4>
             </label>
             <input type="text" id="name" name="name" minlength="4" maxlength="8" size="10"
                 oninput="setAuthorsName(this.value)" class="input">
-        </p>
-        <p>
+        </div>
+        <div class="field">
             <label for="episodeTitle">
-                <h3>Escribe un título para tu episodio</h3>
+                <h4>Escribe un título para tu episodio:</h4>
             </label>
             <input type="text" id="episodeTitle" name="episodeTitle" minlength="4" maxlength="50" size="10"
                 oninput="setEpisodeName(this.value)" class="input titleInput">
-        </p>
+        </div>
         <p>
-        <h3>Selecciona tres palabras y se generará tu Episodio.</h3>
+        <h4>Selecciona tres palabras y se generará tu Episodio:</h4>
         </p>
     </article>
     <div id="wordsWrapper"></div>

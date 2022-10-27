@@ -1,8 +1,14 @@
 body {
   padding: 30px;
+  font-family: sans-serif;
+}
+
+h4 {
+  margin: 0;
 }
 
 .input {
+  margin-left: 10px;
   border-width: 0px 0px 1px 0px;
 }
 
@@ -21,29 +27,37 @@ body {
 
 .episodeName,
 .authorsName {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .word {
   padding: 10px;
   padding-left: 0;
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .red {
   color: red;
 }
 
+.field {
+  display: flex;
+  margin-bottom: 20px;
+}
 a {
   color: red;
 }
 
-.title {
-  margin-top: 10%;
+#title {
+  margin-top: 7%;
 }
 
 @media only screen and (min-width: 768px) {
   .episode {
     max-width: 40%;
+  }
+  .word {
+    font-size: 2rem;
   }
 }
