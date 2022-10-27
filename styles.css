@@ -1,0 +1,27 @@
+body {
+  padding: 30px;
+}
+
+#wordsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.episode {
+    max-width: 50%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 10%;
+}
+.word {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.red {
+    color: red;
+}
+
+a {
+    color: red;
+}
