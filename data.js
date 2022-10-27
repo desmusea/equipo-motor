@@ -287,7 +287,7 @@ const data = {
     FORMAS: [
       {
         sentence:
-          'Las formas de una pintura de Juan Gris me producen curiosidad',
+          'Las formas de una pintura de Juan Gris me producen curiosidad.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/table-du-musicien-mesa-musico',
         key: 'una pintura',
       },
