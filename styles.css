@@ -3,25 +3,31 @@ body {
 }
 
 #wordsWrapper {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .episode {
-    max-width: 50%;
-    text-align: justify;
-    text-justify: inter-word;
-    margin-top: 10%;
+  text-align: justify;
+  margin-top: 10%;
 }
+
 .word {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .red {
-    color: red;
+  color: red;
 }
 
 a {
-    color: red;
+  color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  .episode {
+    margin-top: 100px;
+    max-width: 40%;
+  }
 }
