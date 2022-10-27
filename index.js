@@ -50,7 +50,7 @@ const createEpisode = () => {
   const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
   const authorsNameNode = ` <br/><span class="authorsName">${authorsName}<span>`;
 
-  title.innerHTML = `Episodio 1. <br/>`;
+  title.innerHTML = `Episodio 1.`;
 
   if (episodeName) {
     title.innerHTML += episodeNameNode;
