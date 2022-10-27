@@ -5,6 +5,9 @@ const textNode0 = document.querySelector('#textNode0');
 const textNode1 = document.querySelector('#textNode1');
 const textNode2 = document.querySelector('#textNode2');
 const textNode3 = document.querySelector('#textNode3');
+const title = document.querySelector('#title');
+let authorsName;
+let episodeName;
 
 const { start, end, experiences, words } = data;
 const wordsAvailable = Object.keys(words);
@@ -44,6 +47,7 @@ const createEpisode = () => {
   textNode1.innerHTML = sentence1;
   textNode2.innerHTML = sentence2;
   textNode3.innerHTML = sentence3;
+  title.innerHTML = `Episodio 1. <span class="episodeName"> ${episodeName}<span> <span class="authorsName">${authorsName}<span>`;
 };
 
 const addLink = (sentence, url, key) => {
@@ -103,5 +107,8 @@ const createWordsNodes = () => {
     return wordsWrapper.appendChild(span);
   });
 };
+
+const setAuthorsName = (name) => (authorsName = `${name}. `);
+const setEpisodeName = (name) => (episodeName = `${name}. `);
 
 createWordsNodes();

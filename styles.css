@@ -2,6 +2,14 @@ body {
   padding: 30px;
 }
 
+.input {
+  border-width: 0px 0px 1px 0px;
+}
+
+.titleInput {
+  width: 300px;
+}
+
 #wordsWrapper {
   display: flex;
   flex-wrap: wrap;
@@ -9,11 +17,16 @@ body {
 
 .episode {
   text-align: justify;
-  margin-top: 10%;
+}
+
+.episodeName,
+.authorsName {
+    text-transform: capitalize;
 }
 
 .word {
   padding: 10px;
+  padding-left: 0;
   cursor: pointer;
 }
 
@@ -25,9 +38,12 @@ a {
   color: red;
 }
 
+.title {
+  margin-top: 10%;
+}
+
 @media only screen and (min-width: 768px) {
   .episode {
-    margin-top: 100px;
     max-width: 40%;
   }
 }
