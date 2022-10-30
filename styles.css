@@ -2,14 +2,19 @@ body {
   font-family: sans-serif;
   text-align: justify;
 }
-
+input:focus {
+  outline: none;
+}
 h4 {
   margin: 0;
+  font-size: 26px;
+  font-weight: normal;
 }
 
 .input {
   margin-left: 10px;
-  border-width: 0px 0px 1px 0px;
+  border-width: 0px 0px 3px 0px;
+  border-bottom: 3px solid black;
 }
 
 .titleInput {
@@ -21,16 +26,25 @@ h4 {
   flex-wrap: wrap;
 }
 
-#icon {
-  color: blue;
+#icon1,
+#icon2 {
   font-size: 24px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin: 0;
+}
+#icon2 {
+  margin-left: 50px;
 }
 
 .episodeName,
 .authorsName {
+  font-size: 24px;
   text-transform: capitalize;
 }
-
+#episode {
+  font-size: 24px;
+}
 .authorsName {
   font-weight: 500;
 }
@@ -39,7 +53,7 @@ h4 {
   padding: 10px;
   padding-left: 0;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .red {
@@ -55,7 +69,7 @@ a {
 }
 
 #title {
-  margin-top: 7%;
+  margin-top: 40px;
 }
 
 .sidebar {
@@ -90,18 +104,16 @@ a {
   background-color: blue;
 }
 
-#sidebar1Text {
-  display: none;
-  padding: 0;
-  margin: 0;
-}
-
+#sidebar1Text,
 #sidebar2Text {
   display: none;
-  padding: 0;
+  padding: 0 15px 15px;
   margin: 0;
+  font-size: 24px;
 }
-
+#sidebar2Text {
+  padding-left: 50px;
+}
 #main {
   transition: margin-left 0.5s;
   padding: 10px;
@@ -109,18 +121,18 @@ a {
 }
 
 #links {
-  display: none
+  display: none;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {
-    padding-top: 15px;
+    padding-top: 10px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .episode {
-    max-width: 40%;
+    max-width: 50%;
   }
   .word {
     font-size: 2rem;

@@ -11,7 +11,7 @@
 
 <body>
     <div id="sidebar1" class="sidebar" onclick="toggleNav('side1')">
-        <p id="icon1">✸</p>
+        <p id="icon1">✸ equipoMotor</p>
         <p id="sidebar1Text">
             La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor">equipoMotor</a> tuvo
             lugar entre
@@ -24,22 +24,16 @@
             museo.
             <br />
             <br />
-            equipoMotor, a través de sus sesiones realizó el camino inverso a TXT. Partiendo de distintos ejercicios de
-            mediación por las salas del museo, el equipo dilucidó aquellos términos o conceptos que funcionan como
-            vínculos
-            constantes entre los episodios de Vasos Comunicantes. Conceptos que atraviesan las salas, reinterpretados o
-            transformados en cada uno de los diferentes contextos políticos, artísticos y sociales que circunscriben sus
-            piezas, y que convierten al museo en la máquina de ficción que los acoge.
-            <br />
-            <br />
+            Inspiradas por la obra TXT de Ana Torfs, viajamos a través de la Colección para conocerla y preguntarnos:
+            ¿qué ideas o conceptos conectan los diferentes episodios? ¿Cómo circulan las palabras a través de las obras
+            y los espacios?
 
+            <br />
+            <br />
             El programa se articuló a través de 8 sesiones presenciales y la creación de otros tantos boletines
             digitales,
-            un material de mediación comunitaria que construye un glosario compartido de lectura colectiva.
+            un material de mediación comunitaria que configura un glosario compartido de lectura colectiva.
 
-            <br /> <br />
-            A través de los conceptos extraídos de la experiencia, se presenta aquí la máquina de ficción de Vasos
-            Comunicantes.
             <br />
             Puedes leer los boletines que funcionan como bitácora y relatoría de las sesiones.
             <br /> <br />
@@ -57,8 +51,33 @@
         </p>
     </div>
     <div id="sidebar2" class="sidebar2" onclick="toggleNav('side2')">
-        <p id="icon2">✸</p>
-        <p id="sidebar2Text"> claraa</p>
+        <p id="icon2">✸ TXT</p>
+        <p id="sidebar2Text">
+            Esta web se presenta como resultado del trabajo realizado por equipoMotor durante su primera edición,
+            inspirada por la obra TXT de Ana Torfs.
+            <br>
+            <br>
+            TXT se compone de seis tapices donde se representan unas extrañas máquinas de ficción imaginadas por
+            Jonathan Swift en su obra Los Viajes de Gulliver.
+            <br>
+            Cada máquina está acompañada de una palabra: jengibre,
+            azafrán, azúcar, café, tabaco y chocolate. Estas palabras son un tipo especial de préstamo lingüístico
+            presente en varios idiomas y cuyo origen resulta difícil de determinar.
+            <br>
+
+            Cada tapiz muestra imágenes que relatan los viajes posibles de estos términos a través del mundo.
+            <br>
+            <br>
+            Partiendo de distintos ejercicios de mediación por las salas del museo, equipoMotor dilucidó aquellos
+            conceptos que funcionan como vínculos constantes entre los episodios de Vasos Comunicantes. Conceptos que
+            atraviesan las salas, reinterpretados o transformados en cada uno de los diferentes contextos políticos,
+            artísticos y sociales que circunscriben sus piezas.
+            <br>
+            <br>
+            A través de las palabras extraídas de la experiencia, se presenta aquí la máquina de ficción de Vasos
+            Comunicantes. Tras seleccionar algunas palabras, la máquina generará un itinerario por el museo conectando
+            obras, conceptos y experiencias reales y ficcionadas extraídas de la edición de equipoMotor.
+            <br />
     </div>
     <main id="main">
         <article>
@@ -71,17 +90,16 @@
             </div>
             <div class="field">
                 <label for="episodeTitle">
-                    <h4>Escribe un título para tu Episodio:</h4>
+                    <h4>Escribe un título:</h4>
                 </label>
                 <input type="text" id="episodeTitle" name="episodeTitle" minlength="4" maxlength="50" size="10"
                     oninput="setEpisodeName(this.value)" class="input titleInput">
             </div>
             <p>
-            <h4>Selecciona tres palabras y se generará tu Episodio:</h4>
             </p>
         </article>
         <div id="wordsWrapper"></div>
-        <h3 id="title"></h3>
+        <h4 id="title"></h4>
         <article id="episode" class="episode">
             <span id="start"></span>
             <span id="textNode0"></span>

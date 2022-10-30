@@ -154,6 +154,7 @@ const openNav = (id) => {
     main.style.paddingLeft = '570px';
   }
   if (id === 'side2') {
+    closeNav('side1');
     sidebar2.style.width = '600px';
     sidebar2Text.style.display = 'block';
     icon2.style.display = 'none';
@@ -166,15 +167,19 @@ const closeNav = (id) => {
     sidebar1Text.style.display = 'none';
     sidebar1.style.width = '30px';
     sidebar2.style.width = '70px';
+    sidebar2Text.style.display = 'none';
     icon1.style.display = 'block';
     links.style.display = 'none';
+    icon2.style.display = 'block';
   }
   if (id === 'side2') {
+    closeNav('side1');
+
     sidebar2Text.style.display = 'none';
     sidebar2.style.width = '70px';
     icon2.style.display = 'block';
   }
-  
+
   main.style.paddingLeft = '100px';
 };
 
