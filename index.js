@@ -5,14 +5,26 @@ const textNode0 = document.querySelector('#textNode0');
 const textNode1 = document.querySelector('#textNode1');
 const textNode2 = document.querySelector('#textNode2');
 const textNode3 = document.querySelector('#textNode3');
+const links = document.querySelector('#links');
+
+const main = document.getElementById('main');
+const sidebar1 = document.getElementById('sidebar1');
+const icon1 = document.querySelector('#icon1');
+const sidebar1Text = document.querySelector('#sidebar1Text');
+
+const sidebar2 = document.getElementById('sidebar2');
+const icon2 = document.querySelector('#icon2');
+const sidebar2Text = document.querySelector('#sidebar2Text');
+
 const title = document.querySelector('#title');
 let authorsName;
 let episodeName;
-
+let isOpen = { side1: false, side2: false };
 const { start, end, experiences, words } = data;
 const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
+
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 const createEpisode = () => {
@@ -25,20 +37,25 @@ const createEpisode = () => {
   const word1 = selectedWords[0];
   const word2 = selectedWords[1];
   const word3 = selectedWords[2];
+
+  const word1Idx = getRandomInt(words[word1].length);
+  const word2Idx = getRandomInt(words[word2].length);
+  const word3Idx = getRandomInt(words[word3].length);
+
   const sentence1 = addLink(
-    words[word1][0].sentence,
-    words[word1][0].url,
-    words[word1][0].key
+    words[word1][word1Idx].sentence,
+    words[word1][word1Idx].url,
+    words[word1][word1Idx].key
   );
   const sentence2 = addLink(
-    words[word2][0].sentence,
-    words[word2][0].url,
-    words[word2][0].key
+    words[word2][word2Idx].sentence,
+    words[word2][word2Idx].url,
+    words[word2][word2Idx].key
   );
   const sentence3 = addLink(
-    words[word3][0].sentence,
-    words[word3][0].url,
-    words[word3][0].key
+    words[word3][word3Idx].sentence,
+    words[word3][word3Idx].url,
+    words[word3][word3Idx].key
   );
 
   startSentence.innerText = `${randomStart} `;
@@ -121,5 +138,44 @@ const createWordsNodes = () => {
 
 const setAuthorsName = (name) => (authorsName = name ? `${name}. ` : '');
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
+
+const toggleNav = (id) => {
+  isOpen[id] ? closeNav(id) : openNav(id);
+  isOpen[id] = !isOpen[id];
+};
+
+const openNav = (id) => {
+  if (id === 'side1') {
+    sidebar2.style.width = '540px';
+    sidebar1.style.width = '500px';
+    sidebar1Text.style.display = 'block';
+    icon1.style.display = 'none';
+    links.style.display = 'flex';
+    main.style.paddingLeft = '570px';
+  }
+  if (id === 'side2') {
+    sidebar2.style.width = '600px';
+    sidebar2Text.style.display = 'block';
+    icon2.style.display = 'none';
+    main.style.paddingLeft = '630px';
+  }
+};
+
+const closeNav = (id) => {
+  if (id === 'side1') {
+    sidebar1Text.style.display = 'none';
+    sidebar1.style.width = '30px';
+    sidebar2.style.width = '70px';
+    icon1.style.display = 'block';
+    links.style.display = 'none';
+  }
+  if (id === 'side2') {
+    sidebar2Text.style.display = 'none';
+    sidebar2.style.width = '70px';
+    icon2.style.display = 'block';
+  }
+  
+  main.style.paddingLeft = '100px';
+};
 
 createWordsNodes();

@@ -25,6 +25,13 @@ const data = {
     'Dicen que el Reina Sofía está lleno de fantasmas; yo soy uno de ellos.',
     'Tras la lluvia, se han formado grandes charcos en el jardín del Reina Sofía.',
     'Unas grandes nubes prometen tormenta sobre el Reina Sofía.',
+    'Espero con el grupo en la entrada de Sabatini. Hoy visto chándal.',
+    'Me llegó un correo a spam donde me invitaban al Reina Sofía.',
+    'Anoche soñé con las salas de un museo, hoy estoy aquí.',
+    'Hace poco pasó algo triste. Vengo al museo en busca de paz.',
+    'Hace poco pasó algo alegre. Entro al museo con ganas de celebrar.',
+    'Entro en el museo por primera vez.',
+    'Visito el museo por última vez.',
   ],
   end: [
     'Con extrañeza, pero también alegría, decido salir por la puerta del museo.',
@@ -47,6 +54,10 @@ const data = {
     'Intercambio una sonrisa con una de las mediadoras, y salgo del museo con satisfacción.',
     'Antes de salir, paso por el jardín del museo y me siento en un banco a mirar el cielo.',
     'Al salir del museo, sonrío sintiendo el peso de la obra que he tomado prestada.',
+    'Durante la visita he pensado algunas cosas que no puedo decir',
+    'Leí un relato que hablaba de las últimas veces. Pienso: ¿habrá sido mi última visita al Reina Sofía?',
+    'A la salida un montón de niños corretean por la plaza.',
+    'Me despido del museo hasta dentro de dos semanas.',
   ],
   experiences: [
     'Encuentro un grupo de personas bailando frente a una escultura.',
@@ -93,9 +104,15 @@ const data = {
     TERRITORIO: [
       {
         sentence:
-          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt',
+          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/die-teilung-der-erde-tableaux-zu-rechtlichen-synopsen-der-berliner-afrika-konferenz',
         key: 'La división de la Tierra',
+      },
+      {
+        sentence:
+          'El territorio define las prácticas artísticas de cada lugar. Recorro con la mirada el Mapa de Valencia de Rogelio López Cuenca. ',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/mapa-valencia-polivalencias-altercartografia-critica-ciudad',
+        key: 'Mapa de Valencia',
       },
     ],
     CELEBRACIÓN: [
@@ -159,14 +176,13 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vitrina-vi-prehispanicoantisocialholgazaningrato',
         key: 'piezas precolombinas',
       },
-      [
-        {
-          sentence:
-            'Observo con atención cada una de las piezas que conforman la instalación …y coloniales de Rogelio López Cuenca.',
-          url: 'https://www.museoreinasofia.es/coleccion/obra/coloniales',
-          key: '…y coloniales',
-        },
-      ],
+
+      {
+        sentence:
+          'Observo con atención cada una de las piezas que conforman la instalación …y coloniales de Rogelio López Cuenca.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/coloniales',
+        key: '…y coloniales',
+      },
     ],
     CLIMA: [
       {
@@ -354,6 +370,18 @@ const data = {
           'Imagino a los habitantes de La fábrica dormida, de Daniel Vázquez Díaz, despertándose para acudir a sus trabajos.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/fabrica-dormida',
         key: 'La fábrica dormida',
+      },
+      {
+        sentence:
+          'El cansancio del trabajo a veces es tan grande... de pronto leo "Campesino, rotas tus cadenas, no consientas te opriman otros tiranos" en una litografía de Arturo Ballester',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/campesino-rotas-tus-cadenas-no-consientas-opriman-otros-tiranos',
+        key: '"Campesino, rotas tus cadenas, no consientas te opriman otros tiranos"',
+      },
+      {
+        sentence:
+          'Las ansiedades cotidianas del trabajo me asfixian. Ese lienzo del fondo me ordena: "¡Pare ahora!". Es de Pietrina Checcacci',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/pare-agora-pare-ahora-0',
+        key: 'Pare ahora',
       },
     ],
     INOCENCIA: [

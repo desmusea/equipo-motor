@@ -10,36 +10,87 @@
 </head>
 
 <body>
-    <article>
-        <div class="field">
-            <label for="name">
-                <h4>Escribe tu nombre:</h4>
-            </label>
-            <input type="text" id="name" name="name" minlength="4" maxlength="8" size="10"
-                oninput="setAuthorsName(this.value)" class="input">
-        </div>
-        <div class="field">
-            <label for="episodeTitle">
-                <h4>Escribe un título para tu Episodio:</h4>
-            </label>
-            <input type="text" id="episodeTitle" name="episodeTitle" minlength="4" maxlength="50" size="10"
-                oninput="setEpisodeName(this.value)" class="input titleInput">
-        </div>
-        <p>
-        <h4>Selecciona tres palabras y se generará tu Episodio:</h4>
-        </p>
-    </article>
-    <div id="wordsWrapper"></div>
-    <h3 id="title"></h3>
-    <article id="episode" class="episode">
-        <span id="start"></span>
-        <span id="textNode0"></span>
-        <span id="textNode1"></span>
-        <span id="textNode2"></span>
-        <span id="textNode3"></span>
-        <span id="end"></span>
-    </article>
+    <div id="sidebar1" class="sidebar" onclick="toggleNav('side1')">
+        <p id="icon1">✸</p>
+        <p id="sidebar1Text">
+            La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor">equipoMotor</a> tuvo
+            lugar entre
+            marzo y junio del año 2022.
+            <br /> <br />
+            equipoMotor TXT convocó a las personas que formaron parte de algunas de las Comunidades del Museo Reina
+            Sofía
+            entre los años 2019 y 2022 para recorrer Vasos Comunicantes, la exposición de la Colección Permanente
+            del
+            museo.
+            <br />
+            <br />
+            equipoMotor, a través de sus sesiones realizó el camino inverso a TXT. Partiendo de distintos ejercicios de
+            mediación por las salas del museo, el equipo dilucidó aquellos términos o conceptos que funcionan como
+            vínculos
+            constantes entre los episodios de Vasos Comunicantes. Conceptos que atraviesan las salas, reinterpretados o
+            transformados en cada uno de los diferentes contextos políticos, artísticos y sociales que circunscriben sus
+            piezas, y que convierten al museo en la máquina de ficción que los acoge.
+            <br />
+            <br />
 
+            El programa se articuló a través de 8 sesiones presenciales y la creación de otros tantos boletines
+            digitales,
+            un material de mediación comunitaria que construye un glosario compartido de lectura colectiva.
+
+            <br /> <br />
+            A través de los conceptos extraídos de la experiencia, se presenta aquí la máquina de ficción de Vasos
+            Comunicantes.
+            <br />
+            Puedes leer los boletines que funcionan como bitácora y relatoría de las sesiones.
+            <br /> <br />
+        <nav id="links">
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin1"> Boletín 1 </a><br />
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin2">Boletín 2 </a><br />
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin3"> Boletín 3 </a><br />
+            <a href="https://go.museoreinasofia.es/equipoMOTOR-boletin4"> Boletín 4 </a><br />
+            <a href="https://go.museoreinasofia.es/equipoMOTOR-boletin5"> Boletín 5 </a><br />
+            <a href="https://go.museoreinasofia.es/boletin6"> Boletín 6 </a><br />
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin7"> Boletín 7 </a><br />
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin8"> Boletín 8 </a><br />
+            <a href="https://go.museoreinasofia.es/equipomotor-boletin9"> Boletín 9 </a><br />
+        </nav>
+        </p>
+    </div>
+    <div id="sidebar2" class="sidebar2" onclick="toggleNav('side2')">
+        <p id="icon2">✸</p>
+        <p id="sidebar2Text"> claraa</p>
+    </div>
+    <main id="main">
+        <article>
+            <div class="field">
+                <label for="name">
+                    <h4>Escribe tu nombre:</h4>
+                </label>
+                <input type="text" id="name" name="name" minlength="4" maxlength="8" size="10"
+                    oninput="setAuthorsName(this.value)" class="input">
+            </div>
+            <div class="field">
+                <label for="episodeTitle">
+                    <h4>Escribe un título para tu Episodio:</h4>
+                </label>
+                <input type="text" id="episodeTitle" name="episodeTitle" minlength="4" maxlength="50" size="10"
+                    oninput="setEpisodeName(this.value)" class="input titleInput">
+            </div>
+            <p>
+            <h4>Selecciona tres palabras y se generará tu Episodio:</h4>
+            </p>
+        </article>
+        <div id="wordsWrapper"></div>
+        <h3 id="title"></h3>
+        <article id="episode" class="episode">
+            <span id="start"></span>
+            <span id="textNode0"></span>
+            <span id="textNode1"></span>
+            <span id="textNode2"></span>
+            <span id="textNode3"></span>
+            <span id="end"></span>
+        </article>
+    </main>
     <script type="text/javascript" src="./data.js"></script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
