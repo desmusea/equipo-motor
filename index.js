@@ -6,6 +6,7 @@ const textNode1 = document.querySelector('#textNode1');
 const textNode2 = document.querySelector('#textNode2');
 const textNode3 = document.querySelector('#textNode3');
 const links = document.querySelector('#links');
+const episode = document.querySelector('#episode');
 
 const main = document.getElementById('main');
 const sidebar1 = document.getElementById('sidebar1');
@@ -15,6 +16,10 @@ const sidebar1Text = document.querySelector('#sidebar1Text');
 const sidebar2 = document.getElementById('sidebar2');
 const icon2 = document.querySelector('#icon2');
 const sidebar2Text = document.querySelector('#sidebar2Text');
+
+const sidebar3 = document.getElementById('sidebar3');
+const icon3 = document.querySelector('#icon3');
+const sidebar3Text = document.querySelector('#sidebar3Text');
 
 const title = document.querySelector('#title');
 let authorsName;
@@ -146,19 +151,25 @@ const toggleNav = (id) => {
 
 const openNav = (id) => {
   if (id === 'side1') {
-    sidebar2.style.width = '540px';
     sidebar1.style.width = '500px';
     sidebar1Text.style.display = 'block';
     icon1.style.display = 'none';
     links.style.display = 'flex';
-    main.style.paddingLeft = '570px';
+    wordsWrapper.style.paddingLeft = '570px';
   }
   if (id === 'side2') {
     closeNav('side1');
     sidebar2.style.width = '600px';
     sidebar2Text.style.display = 'block';
     icon2.style.display = 'none';
-    main.style.paddingLeft = '630px';
+    wordsWrapper.style.paddingLeft = '630px';
+  }
+  if (id === 'side3') {
+    closeNav('side2');
+    closeNav('side1');
+    sidebar3.style.width = '580px';
+    sidebar3Text.style.display = 'block';
+    icon3.style.display = 'none';
   }
 };
 
@@ -178,8 +189,15 @@ const closeNav = (id) => {
     sidebar2.style.width = '80px';
     icon2.style.display = 'block';
   }
+  if (id === 'side3') {
+    closeNav('side2');
+    closeNav('side1');
+    sidebar3Text.style.display = 'none';
+    sidebar3.style.width = '130px';
+    icon3.style.display = 'block';
+  }
 
-  main.style.paddingLeft = '165px';
+  wordsWrapper.style.paddingLeft = '165px';
 };
 
 createWordsNodes();
