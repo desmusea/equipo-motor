@@ -11,6 +11,16 @@ h4 {
   font-weight: normal;
 }
 
+button {
+  font-size: 32px;
+  font-weight: normal;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid blue;
+  cursor: pointer;
+  color: blue;
+}
+
 .input {
   margin-left: 10px;
   border-width: 0px 0px 3px 0px;
@@ -76,6 +86,7 @@ a {
   color: blue;
 }
 
+#info,
 #title {
   margin-top: 40px;
   font-size: 32px;

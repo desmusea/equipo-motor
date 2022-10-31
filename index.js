@@ -7,7 +7,7 @@ const textNode2 = document.querySelector('#textNode2');
 const textNode3 = document.querySelector('#textNode3');
 const links = document.querySelector('#links');
 const episode = document.querySelector('#episode');
-
+const info = document.querySelector('#info');
 const main = document.getElementById('main');
 const sidebar1 = document.getElementById('sidebar1');
 const icon1 = document.querySelector('#icon1');
@@ -33,6 +33,8 @@ let selectedWords = [];
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
 const createEpisode = () => {
+  info.style.display = 'none';
+
   const randomeStartIdx = getRandomInt(start.length);
   const randomStart = start[randomeStartIdx];
   const randomeEndIdx = getRandomInt(end.length);
@@ -98,6 +100,7 @@ const resetText = () => {
   textNode2.innerHTML = '';
   textNode3.innerHTML = '';
   title.innerHTML = '';
+  info.style.display = 'block';
 };
 
 const removeWord = (word) => {
