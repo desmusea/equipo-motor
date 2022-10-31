@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div id="sidebar1" class="sidebar" onclick="toggleNav('side1')">
-        <p id="icon1">✸ equipoMotor</p>
+    <div id="sidebar1" class="sidebar sidebar1" onclick="toggleNav('side1')">
+        <p id="icon1">✸ EquipoMotor</p>
         <p id="sidebar1Text">
             La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor">equipoMotor</a> tuvo
             lugar entre
@@ -50,8 +50,8 @@
         </nav>
         </p>
     </div>
-    <div id="sidebar2" class="sidebar2" onclick="toggleNav('side2')">
-        <p id="icon2">✸ TXT</p>
+    <div id="sidebar2" class="sidebar sidebar2" onclick="toggleNav('side2')">
+        <p id="icon2">✸ Máquina de ficción</p>
         <p id="sidebar2Text">
             Esta web se presenta como resultado del trabajo realizado por equipoMotor durante su primera edición,
             inspirada por la obra TXT de Ana Torfs.
@@ -79,8 +79,38 @@
             obras, conceptos y experiencias reales y ficcionadas extraídas de la edición de equipoMotor.
             <br />
     </div>
+
+    <div id="sidebar3" class="sidebar sidebar3" onclick="toggleNav('side3')">
+        <p id="icon3">✸ Episodios</p>
+        <p id="sidebar3Text">
+            Esta web se presenta como resultado del trabajo realizado por equipoMotor durante su primera edición,
+            inspirada por la obra TXT de Ana Torfs.
+            <br>
+            <br>
+            TXT se compone de seis tapices donde se representan unas extrañas máquinas de ficción imaginadas por
+            Jonathan Swift en su obra Los Viajes de Gulliver.
+            <br>
+            Cada máquina está acompañada de una palabra: jengibre,
+            azafrán, azúcar, café, tabaco y chocolate. Estas palabras son un tipo especial de préstamo lingüístico
+            presente en varios idiomas y cuyo origen resulta difícil de determinar.
+            <br>
+
+            Cada tapiz muestra imágenes que relatan los viajes posibles de estos términos a través del mundo.
+            <br>
+            <br>
+            Partiendo de distintos ejercicios de mediación por las salas del museo, equipoMotor dilucidó aquellos
+            conceptos que funcionan como vínculos constantes entre los episodios de Vasos Comunicantes. Conceptos que
+            atraviesan las salas, reinterpretados o transformados en cada uno de los diferentes contextos políticos,
+            artísticos y sociales que circunscriben sus piezas.
+            <br>
+            <br>
+            A través de las palabras extraídas de la experiencia, se presenta aquí la máquina de ficción de Vasos
+            Comunicantes. Tras seleccionar algunas palabras, la máquina generará un itinerario por el museo conectando
+            obras, conceptos y experiencias reales y ficcionadas extraídas de la edición de equipoMotor.
+            <br />
+    </div>
     <main id="main">
-        <article>
+        <!-- <article>
             <div class="field">
                 <label for="name">
                     <h4>Escribe tu nombre:</h4>
@@ -95,9 +125,7 @@
                 <input type="text" id="episodeTitle" name="episodeTitle" minlength="4" maxlength="50" size="10"
                     oninput="setEpisodeName(this.value)" class="input titleInput">
             </div>
-            <p>
-            </p>
-        </article>
+        </article> -->
         <div id="wordsWrapper"></div>
         <h4 id="title"></h4>
         <article id="episode" class="episode">

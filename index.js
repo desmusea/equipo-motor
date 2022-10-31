@@ -166,7 +166,7 @@ const closeNav = (id) => {
   if (id === 'side1') {
     sidebar1Text.style.display = 'none';
     sidebar1.style.width = '30px';
-    sidebar2.style.width = '70px';
+    sidebar2.style.width = '80px';
     sidebar2Text.style.display = 'none';
     icon1.style.display = 'block';
     links.style.display = 'none';
@@ -174,13 +174,12 @@ const closeNav = (id) => {
   }
   if (id === 'side2') {
     closeNav('side1');
-
     sidebar2Text.style.display = 'none';
-    sidebar2.style.width = '70px';
+    sidebar2.style.width = '80px';
     icon2.style.display = 'block';
   }
 
-  main.style.paddingLeft = '100px';
+  main.style.paddingLeft = '165px';
 };
 
 createWordsNodes();
