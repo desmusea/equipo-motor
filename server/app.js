@@ -5,6 +5,16 @@ const app = express();
 
 app.use(express.json());
 
+const saveEpisode = (data) => {
+  const episodesData = JSON.stringify(data);
+  fs.writeFileSync('episodes.json', episodesData);
+};
+
+const getEpisodesData = () => {
+  const episodesData = fs.readFileSync('episodes.json');
+  return JSON.parse(episodesData);
+};
+
 app.post('/episodes', (req, res) => {
   const existsEpisodes = getEpisodesData();
 
@@ -13,15 +23,18 @@ app.post('/episodes', (req, res) => {
   const newEpisode = { id, ...newEpisodeData };
 
   if (!newEpisode.text) {
-    return res
-      .status(401)
-      .send({ error: true, msg: `${JSON.stringify(existsEpisodes)}, ${JSON.stringify(existsEpisodes.length)}` });
+    return res.status(401).send({
+      error: true,
+      msg: `${JSON.stringify(existsEpisodes)}, ${JSON.stringify(
+        existsEpisodes.length
+      )}`,
+    });
   }
 
   existsEpisodes.push(newEpisode);
 
   saveEpisode(existsEpisodes);
-  res.send({ success: true, msg: 'New episode added successfully' });
+  res.send({ success: true, msg: 'New episode added successfully 💅🏾' });
 });
 
 app.get('/episodes', (req, res) => {
@@ -29,16 +42,6 @@ app.get('/episodes', (req, res) => {
   res.send(episodes);
 });
 
-const saveEpisode = (data) => {
-  const stringifyData = JSON.stringify(data);
-  fs.writeFileSync('episodes.json', stringifyData);
-};
-
-const getEpisodesData = () => {
-  const jsonData = fs.readFileSync('episodes.json');
-  return JSON.parse(jsonData);
-};
-
 app.listen(3000, () => {
-  console.log('Server runs on port 3000');
+  console.log('Server runs on port 3000 ✨');
 });
