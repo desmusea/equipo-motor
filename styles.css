@@ -48,11 +48,12 @@ h4 {
 #icon3,
 #icon1,
 #icon2 {
-  font-size: 24px;
+  font-size: 35px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   margin: 0;
 }
+
 #icon2 {
   margin-left: 50px;
 }
@@ -146,6 +147,7 @@ a {
 }
 #sidebar2Text {
   padding-left: 65px;
+  color: #fffff7;
 }
 
 #sidebar3Text {
@@ -164,7 +166,7 @@ a {
   padding-top: 0;
 }
 #sideBarTitle {
-  font-size: 24px;
+  font-size: 28px;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
