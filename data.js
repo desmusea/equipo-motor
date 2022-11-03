@@ -294,8 +294,8 @@ const data = {
       {
         sentence:
           'Me detengo con impresión ante las preciosas páginas del Libro de la Creación de Lygia Pape',
-        url: 'Libro de la Creación',
-        key: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-libro-creacion',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-libro-creacion',
+        key: 'Libro de la Creación',
       },
     ],
     CUERPO: [
