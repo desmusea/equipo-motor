@@ -397,7 +397,7 @@ const data = {
       },
       {
         sentence:
-          'Las ansiedades cotidianas del trabajo me asfixian. Ese lienzo del fondo me ordena: "¡Pare ahora!". Es de Pietrina Checcacci',
+          'Las ansiedades cotidianas del trabajo me asfixian. Ese lienzo del fondo me ordena: "¡Pare ahora!". Es de Pietrina Checcacci.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/pare-agora-pare-ahora-0',
         key: 'Pare ahora',
       },
@@ -479,7 +479,7 @@ const data = {
       },
       {
         sentence:
-          'En una fotografía, veo un grupo de personas permanecen tiradas al borde de un camino..',
+          'En una fotografía, veo un grupo de personas permanecen tiradas al borde de un camino...',
         url: 'https://ladigitaldelreina.museoreinasofia.es/search/item/25308-trisha-brown-group-accumulation-in-central-park-acumulacion-de-grupos-en-central-park-de-trisha-brown?offset=25',
         key: 'una fotografía',
       },
