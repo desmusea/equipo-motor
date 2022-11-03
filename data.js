@@ -104,15 +104,15 @@ const data = {
     TERRITORIO: [
       {
         sentence:
-          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt.',
+          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt',
         url: 'https://www.museoreinasofia.es/coleccion/obra/die-teilung-der-erde-tableaux-zu-rechtlichen-synopsen-der-berliner-afrika-konferenz',
         key: 'La división de la Tierra',
       },
       {
         sentence:
-          'El territorio define las prácticas artísticas de cada lugar. Recorro con la mirada el Mapa de Valencia de Rogelio López Cuenca. ',
-        url: 'https://www.museoreinasofia.es/coleccion/obra/mapa-valencia-polivalencias-altercartografia-critica-ciudad',
-        key: 'Mapa de Valencia',
+          'Examino con atención los territorios señalados en el gran mapa de Juan Downey',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/video-trans-americas-0',
+        key: 'gran mapa',
       },
     ],
     CELEBRACIÓN: [
@@ -212,6 +212,12 @@ const data = {
           'Observo con detenimiento las numerosas líneas que seccionan el Autorretrato cubista de Dalí.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/autorretrato-cubista',
         key: 'Autorretrato cubista',
+      },
+      {
+        sentence:
+          'Camino lentamente por encima de las líneas que se cruzan en una instalación de Luis Camnitzer.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/masacre-puerto-montt',
+        key: 'instalación',
       },
     ],
     CÍRCULO: [
@@ -319,6 +325,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/espectador-espectadores',
         key: 'esculturas humanas',
       },
+      {
+        sentence:
+          'Me inquietan las figuras con máscaras blancas de una serie de fotografías en blanco y negro.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/cultura-felicidad',
+        key: 'serie de fotografías',
+      },
     ],
     FORMAS: [
       {
@@ -362,6 +374,12 @@ const data = {
           'Observo una de las fotografías nocturnas de Berenice Abbott sobre la ciudad de Nueva York.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/new-york-night-nueva-york-noche',
         key: 'fotografías nocturnas',
+      },
+      {
+        sentence:
+          'Me pregunto por las vidas de unas personas fotografiadas por Paolo Gasparini en un parque de Bolivia.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/paz-bolivia-1',
+        key: 'personas fotografiadas',
       },
     ],
     TRABAJO: [
@@ -459,6 +477,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/pueblo-espanol-tiene-camino-que-conduce-estrella-maqueta',
         key: 'la blanca escultura',
       },
+      {
+        sentence:
+          'En una fotografía, veo un grupo de personas permanecen tiradas al borde de un camino..',
+        url: 'https://ladigitaldelreina.museoreinasofia.es/search/item/25308-trisha-brown-group-accumulation-in-central-park-acumulacion-de-grupos-en-central-park-de-trisha-brown?offset=25',
+        key: 'una fotografía',
+      },
     ],
     POESÍA: [
       {
@@ -467,6 +491,18 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/grelots-roses-ciels-lambeaux-cascabeles-rosas-cielos-jirones',
         key: 'pintura',
       },
+      {
+        sentence:
+          'Leo en voz alta, pronunciando como un poema, las palabras en francés que puedo entender de una obra de Broodthaers.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/peintures-pinturas',
+        key: 'obra',
+      },
+      {
+        sentence:
+          'Me pregunto cómo podría replicar uno de los Poemobiles de Augusto de Campos y Julio Plaza.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/poemobiles',
+        key: 'Poemobiles',
+      },
     ],
     RITMO: [
       {
@@ -474,6 +510,12 @@ const data = {
           'En la fotografía de los tejados de una ciudad, un grupo de personas se mueven al mismo ritmo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/trisha-brown-roof-piece-1971-performance-work-trisha-brown-pieza-azotea-1971',
         key: 'la fotografía',
+      },
+      {
+        sentence:
+          'Trato de seguir el ritmo de los bailarines del vídeo M3X3 de Analívia Cordero.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/m3x3',
+        key: 'vídeo',
       },
     ],
     SUCIEDAD: [
@@ -553,6 +595,14 @@ const data = {
           'Me conmueve la amistad de la fotografía de Las dos Fridas de Las Yeguas del Apocalipsis.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
         key: 'Las dos Fridas',
+      },
+    ],
+    VIOLENCIA: [
+      {
+        sentence:
+          'Sigo con la mirada las letras negras del cartel VIOLENCIA de Juan Carlos Romero.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/violencia',
+        key: 'cartel VIOLENCIA',
       },
     ],
   },
