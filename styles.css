@@ -1,10 +1,27 @@
 @font-face {
-  font-family: kenoky;
-  src: url('./fonts/KenokyLight.ttf');
+  font-family: happy-times;
+  src: url('./fonts/happy-times.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: black;
 }
 
 body {
-  font-family: kenoky;
+  font-family: happy-times;
   text-align: justify;
   background-color: #fffff1;
 }
@@ -26,7 +43,7 @@ h4 {
   border-bottom: 2px solid blue;
   cursor: pointer;
   color: blue;
-  font-family: kenoky;
+  padding: 0;
 }
 
 .input {
@@ -51,7 +68,7 @@ h4 {
   font-size: 35px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin: 0;
+  margin: -6px;
 }
 
 #icon2 {
@@ -103,7 +120,7 @@ a {
   margin-top: 40px;
   font-size: 32px;
   padding-bottom: 10px;
-  margin-left: 165px;
+  margin-left: 175px;
 }
 
 .sidebar {
