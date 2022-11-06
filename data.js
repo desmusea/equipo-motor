@@ -7,7 +7,7 @@ const data = {
     'Me cuelo entre la multitud que accede al Reina Sofía.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección.',
-    'He leído en la prensa que el Reina Sofía organizó su colección en ocho episodios, así que me acerco a mirar.',
+    'He leído en la prensa que el Reina Sofía organizó su colección en ocho Episodios, así que me acerco a mirar.',
     'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
     'He llegado al Reina Sofía siguiendo un pájaro extraño.',
