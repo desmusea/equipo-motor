@@ -7,7 +7,8 @@ const data = {
     'Me cuelo entre la multitud que accede al Reina Sofía.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección.',
-    'He leído en la prensa que el Reina Sofía organizó su colección en ocho episodios, así que me acerco a mirar.',
+    'He leído en la prensa que el Reina Sofía organizó su colección en ocho Episodios, así que me acerco a mirar.',
+    'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
     'He llegado al Reina Sofía siguiendo un pájaro extraño.',
     'Recuerdo la primera vez que entré al Reina Sofía.',
@@ -18,7 +19,7 @@ const data = {
     'Voy al Reina Sofía de excursión con el colegio.',
     'Un hueco en la pared de mi habitación me ha dirigido al Reina Sofía.',
     'Hoy he quedado en el Reina Sofía.',
-    'El día de mi cumpleaños, decidí visitar el Reina Sofía.',
+    'El día de mi cumpleaños, decido visitar el Reina Sofía.',
     'Me acerco al Reina Sofía, confundiéndolo con una nave espacial.',
     'Entro al Reina Sofía, ante una misteriosa invitación que ha llegado a mi bandeja de entrada.',
     'Miau, miau, soy un gato que se ha colado en el Reina Sofía.',
@@ -43,7 +44,7 @@ const data = {
     'Giro una última vez la cabeza al salir del museo, y veo a alguien transparente mirándome desde una ventana antes de desaparecer rápidamente.',
     'Fuera del Reina, hace un día buenísimo.',
     'Me despido del museo con una sonrisa de satisfacción.',
-    'Alguien se ha dejado un trozo de empanada sobre un banco del jardín.',
+    'Alguien se ha dejado un trozo de empanada sobre un banco del jardín; tiene una pinta deliciosa.',
     'Marcho del museo y comienza a llover, así que corro a refugiarme de la tormenta.',
     'Antes de irme, tomo un poco de salvia del jardín del museo para la comida del día.',
     'Un vigilante de sala me observa mientras me acerco a la salida, y me dedica una última sonrisa.',
@@ -55,9 +56,10 @@ const data = {
     'Antes de salir, paso por el jardín del museo y me siento en un banco a mirar el cielo.',
     'Al salir del museo, sonrío sintiendo el peso de la obra que he tomado prestada.',
     'Durante la visita he pensado algunas cosas que no puedo decir',
-    'Leí un relato que hablaba de las últimas veces. Pienso: ¿habrá sido mi última visita al Reina Sofía?',
-    'A la salida un montón de niños corretean por la plaza.',
+    'Leí una vez un relato que hablaba de las últimas veces. Pienso: ¿habrá sido mi última visita al Reina Sofía?',
+    'A la salida del museo, un montón de niños corretean por la plaza.',
     'Me despido del museo hasta dentro de dos semanas.',
+    'Creo que me quedaré a vivir aquí.',
   ],
   experiences: [
     'Encuentro un grupo de personas bailando frente a una escultura.',
@@ -78,8 +80,8 @@ const data = {
     'Atravieso varias salas sacando fotografías a los círculos que encuentro en las obras.',
     'Atravieso varias salas sacando fotografías a las líneas que encuentro en las obras.',
     'Observo una bandera de colores serpentear a lo lejos.',
-    'Alguien ha metido un barco de papel en un cajetín con las hojas de sala.',
-    'En el cajetín con las hojas de sala, encuentro una intervenida con dibujos.',
+    'Alguien ha metido un barco de papel en un cajetín con las hojas de sala; lo tomo y lo despliego.',
+    'En el cajetín con las hojas de sala, encuentro una de ellas intervenida con dibujos.',
   ],
   words: {
     TIEMPO: [
@@ -104,15 +106,15 @@ const data = {
     TERRITORIO: [
       {
         sentence:
-          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt.',
+          'Trato de distinguir los territorios demarcados en La división de la Tierra de Dierk Schmidt',
         url: 'https://www.museoreinasofia.es/coleccion/obra/die-teilung-der-erde-tableaux-zu-rechtlichen-synopsen-der-berliner-afrika-konferenz',
         key: 'La división de la Tierra',
       },
       {
         sentence:
-          'El territorio define las prácticas artísticas de cada lugar. Recorro con la mirada el Mapa de Valencia de Rogelio López Cuenca. ',
-        url: 'https://www.museoreinasofia.es/coleccion/obra/mapa-valencia-polivalencias-altercartografia-critica-ciudad',
-        key: 'Mapa de Valencia',
+          'Examino con atención los territorios señalados en el gran mapa de Juan Downey',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/video-trans-americas-0',
+        key: 'gran mapa',
       },
     ],
     CELEBRACIÓN: [
@@ -162,6 +164,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vertical-9',
         key: 'fotografiados',
       },
+      {
+        sentence:
+          'Examino con atención algunas de las fichas de la obra Identidad de Artista de Angelo de Aquino.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/identidade-do-artista-identidad-artista',
+        key: 'Identidad de Artista',
+      },
     ],
     COLONIALISMO: [
       {
@@ -176,7 +184,6 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vitrina-vi-prehispanicoantisocialholgazaningrato',
         key: 'piezas precolombinas',
       },
-
       {
         sentence:
           'Observo con atención cada una de las piezas que conforman la instalación …y coloniales de Rogelio López Cuenca.',
@@ -199,6 +206,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/evviva-il-coltello-es-lebe-das-messer-viva-cuchillo',
         key: 'instalación de Ines Doujak',
       },
+      {
+        sentence:
+          'Admiro el poder que transmite el póster de María María Acha-Kutscher.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/toma-calle-2011-madrid',
+        key: 'póster',
+      },
     ],
     LÍNEAS: [
       {
@@ -212,6 +225,12 @@ const data = {
           'Observo con detenimiento las numerosas líneas que seccionan el Autorretrato cubista de Dalí.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/autorretrato-cubista',
         key: 'Autorretrato cubista',
+      },
+      {
+        sentence:
+          'Camino lentamente por encima de las líneas que se cruzan en una instalación de Luis Camnitzer.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/masacre-puerto-montt',
+        key: 'una instalación',
       },
     ],
     CÍRCULO: [
@@ -275,6 +294,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/salidas-ordenador-hexagonos-8',
         key: 'una obra',
       },
+      {
+        sentence:
+          'Aprieto los ojos, tratando de descifrar el significado del Programa MOUVNT de Alexanco, sin éxito.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/programa-mouvnto',
+        key: 'Programa MOVNT',
+      },
     ],
     HOGAR: [
       {
@@ -283,11 +308,16 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/spider-arana',
         key: 'Araña',
       },
+      {
+        sentence: 'Camino junto a la ropa tendida en el hogar de Doña Concha.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/dona-concha',
+        key: 'ropa tendida',
+      },
     ],
     CREACIÓN: [
       {
         sentence:
-          'Me detengo con impresión ante las preciosas páginas del Libro de la Creación de Lygia Pape',
+          'Me detengo con impresión ante las preciosas páginas del Libro de la Creación de Lygia Pape.',
         url: 'Libro de la Creación',
         key: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-libro-creacion',
       },
@@ -318,6 +348,18 @@ const data = {
           'Me pego un susto al entrar a una sala y ver sentadas a las esculturas humanas de Equipo Crónica.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/espectador-espectadores',
         key: 'esculturas humanas',
+      },
+      {
+        sentence:
+          'Me inquietan las figuras con máscaras blancas de una serie de fotografías en blanco y negro.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/cultura-felicidad',
+        key: 'serie de fotografías',
+      },
+      {
+        sentence:
+          'Me sobrecoge mirar la enorme boca abierta representada en Sonido de Victoria Gil.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sonido-0',
+        key: 'Sonido',
       },
     ],
     FORMAS: [
@@ -363,6 +405,18 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/new-york-night-nueva-york-noche',
         key: 'fotografías nocturnas',
       },
+      {
+        sentence:
+          'Me pregunto por las vidas de unas personas fotografiadas por Paolo Gasparini en un parque de Bolivia.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/paz-bolivia-1',
+        key: 'personas fotografiadas',
+      },
+      {
+        sentence:
+          'Miro con pesadumbre la fotografía de una ciudad derruida tomada por Gabriele Basilico.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/rue-allemby-rue-fakhry-bey-calle-allemby-calle-fakhry-bey',
+        key: 'fotografía',
+      },
     ],
     TRABAJO: [
       {
@@ -391,6 +445,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/comulgante',
         key: 'La comulgante',
       },
+      {
+        sentence:
+          'Unas inocentes y humildes manos asoman en una obra de Andrea Büttner, pidiendo sin palabras.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/beggar-mendigo',
+        key: 'obra',
+      },
     ],
     CASA: [
       {
@@ -398,6 +458,18 @@ const data = {
           'Me pregunto cómo quedaría la butaca de Josep Torres Clavé en el salón de mi casa.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/butaca',
         key: 'butaca',
+      },
+      {
+        sentence:
+          'En la fotografía de lo que parece una casa abandonada, una persona enmascarada me devuelve la mirada.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/arthur-rimbaud-new-york-arthur-rimbaud-nueva-york-0',
+        key: 'una fotografía',
+      },
+      {
+        sentence:
+          'Una escultura blanca de Susana Solano forma lo que podría ser una pequeña casa.',
+        url: 'https://ladigitaldelreina.museoreinasofia.es/search/item/96330-serie-la-lluna-n-ordm-4-serie-la-luna-n-ordm-4?offset=161',
+        key: 'escultura blanca',
       },
     ],
     LEJANÍA: [
@@ -407,6 +479,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/figura-finestra-figura-ventana',
         key: 'Figura en una ventana',
       },
+      {
+        sentence:
+          'En la obra Poniente de Rafael Alberti, unas pirámides se recortan frente a la coloreada lejanía, y deseo caminar hasta ella.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sin-titulo-poniente',
+        key: 'Poniente',
+      },
     ],
     ESPACIO: [
       {
@@ -415,11 +493,17 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/alegoria-invierno',
         key: 'Alegoría del Invierno',
       },
+      {
+        sentence:
+          'Me imagino saltando por el espacio interior de una serie de esculturas de Donald Judd, de hueco en hueco.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/untitled-floor-sculpture-series-sin-titulo-serie-escultura-suelo',
+        key: 'serie de esculturas',
+      },
     ],
     VIDA: [
       {
         sentence:
-          'Observo con detenimiento todas las pequeñas vidas representadas en la superficie de Un mundo de Ángeles Santos.',
+          'Observo con detenimiento todas las minúsculas vidas representadas en la superficie de Un mundo de Ángeles Santos.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/mundo',
         key: 'Un mundo',
       },
@@ -430,6 +514,12 @@ const data = {
           'Contemplo con ternura (y algo de vergüenza) la mirada amorosa que se intercambian Adán y Eva en la pintura de Rosario de Velasco',
         url: 'https://www.museoreinasofia.es/coleccion/obra/adan-eva-0',
         key: 'Adán y Eva',
+      },
+      {
+        sentence:
+          'Me pregunto si los dos personajes que aparecen en una pintura de Luis Castellanos serán amigos o amantes.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/atletas',
+        key: 'una pintura',
       },
     ],
     EXPOSICIÓN: [
@@ -459,6 +549,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/pueblo-espanol-tiene-camino-que-conduce-estrella-maqueta',
         key: 'la blanca escultura',
       },
+      {
+        sentence:
+          'En una fotografía, veo con extrañeza un grupo de personas que permanecen tiradas al borde de un camino.',
+        url: 'https://ladigitaldelreina.museoreinasofia.es/search/item/25308-trisha-brown-group-accumulation-in-central-park-acumulacion-de-grupos-en-central-park-de-trisha-brown?offset=25',
+        key: 'una fotografía',
+      },
     ],
     POESÍA: [
       {
@@ -467,6 +563,18 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/grelots-roses-ciels-lambeaux-cascabeles-rosas-cielos-jirones',
         key: 'pintura',
       },
+      {
+        sentence:
+          'Leo en voz alta, pronunciando como un poema, las palabras en francés que puedo entender de una obra de Broodthaers.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/peintures-pinturas',
+        key: 'obra',
+      },
+      {
+        sentence:
+          'Me pregunto cómo podría replicar uno de los Poemobiles de Augusto de Campos y Julio Plaza.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/poemobiles',
+        key: 'Poemobiles',
+      },
     ],
     RITMO: [
       {
@@ -474,6 +582,12 @@ const data = {
           'En la fotografía de los tejados de una ciudad, un grupo de personas se mueven al mismo ritmo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/trisha-brown-roof-piece-1971-performance-work-trisha-brown-pieza-azotea-1971',
         key: 'la fotografía',
+      },
+      {
+        sentence:
+          'Trato de seguir el ritmo de los bailarines del vídeo M3X3 de Analívia Cordero.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/m3x3',
+        key: 'vídeo',
       },
     ],
     SUCIEDAD: [
@@ -497,6 +611,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/arts-crafts-and-facts-100-productivity-77-total-compensationinflation-30-total',
         key: 'tela',
       },
+      {
+        sentence:
+          'Observo una tela roja de Hélio Oiticica que cuelga solemne como una bandera.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/seja-marginal-seja-heroi-sea-marginal-sea-heroe-0',
+        key: 'tela roja',
+      },
     ],
     ARQUITECTURA: [
       {
@@ -505,12 +625,17 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/cheminee-chimenea',
         key: 'pintura',
       },
-      ,
       {
         sentence:
           'Una fotografía de ordenadas viviendas de un pueblo llama mi atención.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/vegaviana',
         key: 'fotografía',
+      },
+      {
+        sentence:
+          'Una extraña maqueta de forma cónica llama poderosamente mi atención, y me acerco a ella a curiosear.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/monumento-faro-colon',
+        key: 'maqueta',
       },
     ],
     GUERRA: [
@@ -525,6 +650,12 @@ const data = {
           'Me estremece una pintura de Ceija Stojka sobre los campos de concentración de la Segunda Guerra Mundial.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/auschwitz-2101944',
         key: 'pintura',
+      },
+      {
+        sentence:
+          'Observo el cartel de Joan Miró producido para reunir fondos republicanos durante la Guerra Civil.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/aidez-lespagne-ayudad-espana',
+        key: 'cartel',
       },
     ],
     AMISTAD: [
@@ -553,6 +684,30 @@ const data = {
           'Me conmueve la amistad de la fotografía de Las dos Fridas de Las Yeguas del Apocalipsis.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
         key: 'Las dos Fridas',
+      },
+    ],
+    VIOLENCIA: [
+      {
+        sentence:
+          'Sigo con la mirada las letras negras del cartel VIOLENCIA de Juan Carlos Romero.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/violencia',
+        key: 'VIOLENCIA',
+      },
+    ],
+    BARCO: [
+      {
+        sentence:
+          'Agito levemente la cabeza mientras miro el pequeño barco en una obra de Feliciano Cinturón, como queriendo hacer que se balancee.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/inmensamente-azul',
+        key: 'obra',
+      },
+    ],
+    TELEVISIÓN: [
+      {
+        sentence:
+          'Trato de entender lo que sucede en las superficies pintadas de los televisores de Agustín Parejo School.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/lenin-cumbe',
+        key: 'televisores',
       },
     ],
   },

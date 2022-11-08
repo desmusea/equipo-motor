@@ -6,7 +6,7 @@
 body {
   font-family: kenoky;
   text-align: justify;
-  background-color: #FFFFF1;
+  background-color: #fffff1;
 }
 
 input:focus {
@@ -19,7 +19,8 @@ h4 {
 }
 
 .button {
-  font-size: 32px;
+  font-family: happy-times;
+  font-size: 22px;
   font-weight: normal;
   background: transparent;
   border: 0;
@@ -27,6 +28,7 @@ h4 {
   cursor: pointer;
   color: blue;
   font-family: kenoky;
+  padding: 0;
 }
 
 .input {
@@ -43,22 +45,24 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   padding-left: 165px;
+  padding-top: 20px;
 }
 
 #icon3,
 #icon1,
 #icon2 {
-  font-size: 24px;
+  font-size: 35px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin: 0;
+  margin: -6px;
 }
+
 #icon2 {
   margin-left: 50px;
 }
 #icon3 {
   margin-left: 100px;
-  color: #FFFFF1;
+  color: #fffff1;
 }
 .episodeName,
 .authorsName {
@@ -84,8 +88,8 @@ h4 {
 }
 
 .red {
- background-color: blue;
- color: #FFFFF1;
+  background-color: blue;
+  color: #fffff1;
 }
 
 .field {
@@ -100,9 +104,9 @@ a {
 #info,
 #title {
   margin-top: 40px;
-  font-size: 32px;
+  font-size: 22px;
   padding-bottom: 10px;
-  margin-left: 165px;
+  margin-left: 175px;
 }
 
 .sidebar {
@@ -116,7 +120,7 @@ a {
   transition: 0.5s;
   width: 30px;
   border-right: 3px solid black;
-  background: #FFFFF1;
+  background: #fffff1;
   padding: 10px;
 }
 
@@ -131,7 +135,7 @@ a {
 }
 
 .sidebar3 {
-  color: #FFFFF1;
+  color: #fffff1;
   width: 130px;
   background-color: black;
 }
@@ -146,10 +150,11 @@ a {
 }
 #sidebar2Text {
   padding-left: 65px;
+  color: #fffff7;
 }
 
 #sidebar3Text {
-  color: #FFFFF1;
+  color: #fffff1;
   padding-left: 110px;
 }
 
@@ -159,12 +164,14 @@ a {
 
 #links {
   display: none;
-  flex-direction: column;
   padding-left: 15px;
   padding-top: 0;
 }
+.link {
+  margin: 10px;
+}
 #sideBarTitle {
-  font-size: 24px;
+  font-size: 28px;
 }
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
@@ -175,7 +182,7 @@ a {
 
 @media only screen and (min-width: 768px) {
   .episode {
-    max-width: 70%;
+    width: 70%;
   }
   .word {
     font-size: 2rem;
