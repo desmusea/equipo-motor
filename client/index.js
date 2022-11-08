@@ -186,35 +186,17 @@ const closeNav = (id) => {
   wordsWrapper.style.paddingLeft = '165px';
 };
 
-const getEpisodes = () => {
-  fetch('http://localhost:3000/episodes')
-    .then((response) => response.json())
-    .then((data) =>
-      data.map((episode) => {
-        episodeslist.innerHTML += `<div><span>${episode.title}</span><br>${episode.text}<div></br>`;
-      })
-    );
-};
-
-const postData = async (url = '', data = {}) => {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
+const setEpisodes = (episodes) =>
+  episodes.map((episode) => {
+    episodeslist.innerHTML += `<div><span>${episode.title}</span><br>${episode.text}<div></br>`;
   });
-  return response.json();
-};
 
-const postEpisode = () => {
-  postData('http://localhost:3000/episodes', {
+const getEpisodes = () => fetchEpisodes(setEpisodes);
+
+const postEpisode = () =>
+  saveEpisode('http://localhost:3000/episodes', {
     text: finalText,
     title: episodesTitle,
-  }).then((data) => {
-    console.log(data);
   });
-};
-
 
 createWordsNodes();
