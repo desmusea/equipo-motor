@@ -1,12 +1,6 @@
 const wordsWrapper = document.getElementById('wordsWrapper');
-const startSentence = document.getElementById('start');
-const endSentence = document.getElementById('end');
-const textNode0 = document.querySelector('#textNode0');
-const textNode1 = document.querySelector('#textNode1');
-const textNode2 = document.querySelector('#textNode2');
-const textNode3 = document.querySelector('#textNode3');
-const links = document.querySelector('#links');
 const episode = document.querySelector('#episode');
+const links = document.querySelector('#links');
 const info = document.querySelector('#info');
 const main = document.getElementById('main');
 const sidebar1 = document.getElementById('sidebar1');
@@ -16,11 +10,11 @@ const episodeslist = document.querySelector('#episodeslist');
 const sidebar2 = document.getElementById('sidebar2');
 const icon2 = document.querySelector('#icon2');
 const sidebar2Text = document.querySelector('#sidebar2Text');
-
 const sidebar3 = document.getElementById('sidebar3');
 const icon3 = document.querySelector('#icon3');
 const sidebar3Text = document.querySelector('#sidebar3Text');
 const title = document.querySelector('#title');
+
 let episodesTitle;
 let finalText;
 let episodeName;
@@ -29,27 +23,6 @@ const { start, end, experiences, words } = data;
 const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
-
-const getRandomInt = (max) => Math.floor(Math.random() * max);
-
-const addZero = (i) => {
-  if (i < 10) {
-    i = `0${i}`;
-  }
-  return i;
-};
-
-const getTitle = () => {
-  const d = new Date();
-  let day = addZero(d.getDate());
-  let month = addZero(d.getMonth());
-  let year = addZero(d.getFullYear());
-
-  let hour = addZero(d.getHours());
-  let minute = addZero(d.getMinutes());
-  let second = addZero(d.getSeconds());
-  return `${day}${month}${year}${hour}${minute}${second}`;
-};
 
 const createEpisode = () => {
   info.style.display = 'none';
@@ -84,15 +57,10 @@ const createEpisode = () => {
     words[word3][word3Idx].key
   );
 
-  startSentence.innerText = `${randomStart} `;
-  endSentence.innerText = `${randomEnd} `;
-  textNode0.innerHTML = randomExp;
-  textNode1.innerHTML = sentence1;
-  textNode2.innerHTML = sentence2;
-  textNode3.innerHTML = sentence3;
   const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
   finalText = `${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
   episodesTitle = getTitle();
+  episode.innerHTML = finalText;
   title.innerHTML = episodesTitle;
 
   if (episodeName) {
@@ -122,7 +90,7 @@ const resetText = () => {
 const removeWord = (word) => {
   selectedWords = selectedWords.filter((w) => w !== word);
   const currentNode = document.getElementById(word);
-  currentNode.classList.remove('red');
+  currentNode.classList.remove('blue');
 };
 
 const selectWord = (word) =>
@@ -130,7 +98,7 @@ const selectWord = (word) =>
 
 const addWord = (word) => {
   const currentWord = document.getElementById(word);
-  currentWord.classList += ' red';
+  currentWord.classList += ' blue';
   if (selectedWords.length < 2) {
     selectWord(word);
   } else if (selectedWords.length === 2) {
@@ -139,12 +107,12 @@ const addWord = (word) => {
       createEpisode();
     }
   } else if (selectedWords.length === 3) {
-    const selectedNodes = document.querySelectorAll('.red');
-    selectedNodes.forEach((node) => node.classList.remove('red'));
+    const selectedNodes = document.querySelectorAll('.blue');
+    selectedNodes.forEach((node) => node.classList.remove('blue'));
     resetText();
     selectedWords = [];
     selectedWords.push(word);
-    currentWord.classList += ' red';
+    currentWord.classList += ' blue';
   }
 };
 
@@ -244,8 +212,9 @@ const postEpisode = () => {
     text: finalText,
     title: episodesTitle,
   }).then((data) => {
-    console.log(data); // JSON data parsed by `data.json()` call
+    console.log(data);
   });
 };
+
 
 createWordsNodes();

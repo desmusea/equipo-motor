@@ -12,10 +12,15 @@ body {
 input:focus {
   outline: none;
 }
+
 h4 {
   margin: 0;
   font-size: 26px;
   font-weight: normal;
+}
+
+a {
+  color: blue;
 }
 
 .button {
@@ -29,16 +34,6 @@ h4 {
   color: blue;
   font-family: kenoky;
   padding: 0;
-}
-
-.input {
-  margin-left: 10px;
-  border-width: 0px 0px 3px 0px;
-  border-bottom: 3px solid black;
-}
-
-.titleInput {
-  width: 300px;
 }
 
 #wordsWrapper {
@@ -60,45 +55,30 @@ h4 {
 #icon2 {
   margin-left: 50px;
 }
+
 #icon3 {
   margin-left: 100px;
   color: #fffff1;
 }
-.episodeName,
-.authorsName {
-  font-size: 24px;
-  text-transform: capitalize;
-}
+
 #episode {
   font-size: 24px;
-  margin-left: 165px;
-}
-.authorsName {
-  font-weight: 500;
+  margin-left: 175px;
 }
 
 .word {
   padding: 10px;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: sans-serif;
   border: 1px solid black;
   border-radius: 50px;
   margin: 5px;
 }
 
-.red {
+.blue {
   background-color: blue;
   color: #fffff1;
-}
-
-.field {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-a {
-  color: blue;
 }
 
 #info,
@@ -179,18 +159,4 @@ a {
   width: 70%;
   font-family: sans-serif;
 }
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 10px;
-  }
-}
 
-@media only screen and (min-width: 768px) {
-  .episode {
-    width: 70%;
-  }
-  .word {
-    font-size: 2rem;
-  }
-}

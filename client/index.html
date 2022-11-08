@@ -88,7 +88,6 @@
             equipoMotor.TXT.
             <br />
     </div>
-
     <div id="sidebar3" class="sidebar sidebar3" onclick="toggleNav('side3')">
         <p id="icon3">✸ Episodios</p>
         <p id="sidebar3Text">
@@ -108,8 +107,9 @@
             <br><br>
             Puedes crear tu Episodio seleccionando tres palabras del listado, o visitar otros Episodios creados haciendo
             click
-            <button onclick="getEpisodes()">aquí.</button>
+            <button onclick="setEpisodes()" class="button">aquí.</button>
     </div>
+
     <main id="main">
         <h4 id="info">Selecciona tres palabras para crear un nuevo <button class="button"
                 onclick="toggleNav('side3')">Episodio</button> o visita los Episodios creados por otras
@@ -118,21 +118,13 @@
         <div>
             <h4 id="title"></h4>
             <article id="episode" class="episode">
-                <span id="start"></span>
-                <span id="textNode0"></span>
-                <span id="textNode1"></span>
-                <span id="textNode2"></span>
-                <span id="textNode3"></span>
-                <span id="end"></span>
             </article>
-
-            <div id="episodeslist" class="episodesList">
-                <button onclick="postEpisode()">Crear episodio</button>
-            </div>
+            <article id="episodeslist" class="episodesList">
+                <button onclick="postEpisode()" class="button">Crear episodio</button>
+            </article>
         </div>
-
-
     </main>
+    <script type="text/javascript" src="./helpers.js"></script>
     <script type="text/javascript" src="./data.js"></script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
