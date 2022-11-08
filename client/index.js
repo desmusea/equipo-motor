@@ -20,9 +20,9 @@ const sidebar2Text = document.querySelector('#sidebar2Text');
 const sidebar3 = document.getElementById('sidebar3');
 const icon3 = document.querySelector('#icon3');
 const sidebar3Text = document.querySelector('#sidebar3Text');
-
 const title = document.querySelector('#title');
-let authorsName;
+let episodesTitle;
+let finalText;
 let episodeName;
 let isOpen = { side1: false, side2: false };
 const { start, end, experiences, words } = data;
@@ -31,6 +31,25 @@ const wordsAvailable = Object.keys(words);
 let selectedWords = [];
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
+
+const addZero = (i) => {
+  if (i < 10) {
+    i = `0${i}`;
+  }
+  return i;
+};
+
+const getTitle = () => {
+  const d = new Date();
+  let day = addZero(d.getDate());
+  let month = addZero(d.getMonth());
+  let year = addZero(d.getFullYear());
+
+  let hour = addZero(d.getHours());
+  let minute = addZero(d.getMinutes());
+  let second = addZero(d.getSeconds());
+  return `${day}${month}${year}${hour}${minute}${second}`;
+};
 
 const createEpisode = () => {
   info.style.display = 'none';
@@ -72,15 +91,12 @@ const createEpisode = () => {
   textNode2.innerHTML = sentence2;
   textNode3.innerHTML = sentence3;
   const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
-  const authorsNameNode = ` <br/><span class="authorsName">${authorsName}<span>`;
-
-  title.innerHTML = `Episodio 1.`;
+  finalText = `${randomStart} ${randomExp} ${sentence1} ${sentence1} ${sentence1} ${randomEnd}`;
+  episodesTitle = getTitle();
+  title.innerHTML = episodesTitle;
 
   if (episodeName) {
     title.innerHTML += episodeNameNode;
-  }
-  if (authorsName) {
-    title.innerHTML += authorsNameNode;
   }
 };
 
@@ -144,7 +160,6 @@ const createWordsNodes = () => {
   });
 };
 
-const setAuthorsName = (name) => (authorsName = name ? `${name}. ` : '');
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const toggleNav = (id) => {
@@ -201,6 +216,32 @@ const closeNav = (id) => {
   }
 
   wordsWrapper.style.paddingLeft = '165px';
+};
+
+const getEpisodes = () => {
+  fetch('http://localhost:3000/episodes')
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+};
+
+const postData = async (url = '', data = {}) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  return response.json();
+};
+
+const postEpisode = () => {
+  postData('http://localhost:3000/episodes', {
+    text: finalText,
+    title: episodesTitle,
+  }).then((data) => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
 };
 
 createWordsNodes();
