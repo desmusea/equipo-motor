@@ -173,6 +173,12 @@ a {
 #sideBarTitle {
   font-size: 28px;
 }
+.episodesList {
+  margin-left: 165px;
+  font-size: 24px;
+  width: 70%;
+  font-family: sans-serif;
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {

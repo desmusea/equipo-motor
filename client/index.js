@@ -12,7 +12,7 @@ const main = document.getElementById('main');
 const sidebar1 = document.getElementById('sidebar1');
 const icon1 = document.querySelector('#icon1');
 const sidebar1Text = document.querySelector('#sidebar1Text');
-
+const episodeslist = document.querySelector('#episodeslist');
 const sidebar2 = document.getElementById('sidebar2');
 const icon2 = document.querySelector('#icon2');
 const sidebar2Text = document.querySelector('#sidebar2Text');
@@ -91,7 +91,7 @@ const createEpisode = () => {
   textNode2.innerHTML = sentence2;
   textNode3.innerHTML = sentence3;
   const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
-  finalText = `${randomStart} ${randomExp} ${sentence1} ${sentence1} ${sentence1} ${randomEnd}`;
+  finalText = `${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
   episodesTitle = getTitle();
   title.innerHTML = episodesTitle;
 
@@ -221,7 +221,11 @@ const closeNav = (id) => {
 const getEpisodes = () => {
   fetch('http://localhost:3000/episodes')
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) =>
+      data.map((episode) => {
+        episodeslist.innerHTML += `<div><span>${episode.title}</span><br>${episode.text}<div></br>`;
+      })
+    );
 };
 
 const postData = async (url = '', data = {}) => {

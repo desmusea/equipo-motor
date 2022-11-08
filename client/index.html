@@ -107,12 +107,13 @@
             Sofía.
             <br><br>
             Puedes crear tu Episodio seleccionando tres palabras del listado, o visitar otros Episodios creados haciendo
-            click aquí.
+            click
+            <button onclick="getEpisodes()">aquí.</button>
     </div>
     <main id="main">
         <h4 id="info">Selecciona tres palabras para crear un nuevo <button class="button"
                 onclick="toggleNav('side3')">Episodio</button> o visita los Episodios creados por otras
-            personas haciendo clic <button class="button">aquí</button>.</h4>
+            personas haciendo clic <button class="button" onclick="getEpisodes()">aquí</button>.</h4>
         <div id="wordsWrapper"></div>
         <div>
             <h4 id="title"></h4>
@@ -123,10 +124,13 @@
                 <span id="textNode2"></span>
                 <span id="textNode3"></span>
                 <span id="end"></span>
-                <button onclick="postEpisode()">crear episodio</button>
-                <button onclick="getEpisodes()">recuperar episodios</button>
             </article>
+
+            <div id="episodeslist" class="episodesList">
+                <button onclick="postEpisode()">Crear episodio</button>
+            </div>
         </div>
+
 
     </main>
     <script type="text/javascript" src="./data.js"></script>
