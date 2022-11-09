@@ -3,22 +3,23 @@ const episode = document.querySelector('#episode');
 const links = document.querySelector('#links');
 const info = document.querySelector('#info');
 const main = document.getElementById('main');
-const sidebar1 = document.getElementById('sidebar1');
+const sideModal1 = document.getElementById('sideModal1');
 const icon1 = document.querySelector('#icon1');
-const sidebar1Text = document.querySelector('#sidebar1Text');
+const sideModal1Text = document.querySelector('#sideModal1Text');
 const episodeslist = document.querySelector('#episodeslist');
-const sidebar2 = document.getElementById('sidebar2');
+const sideModal2 = document.getElementById('sideModal2');
 const icon2 = document.querySelector('#icon2');
-const sidebar2Text = document.querySelector('#sidebar2Text');
-const sidebar3 = document.getElementById('sidebar3');
+const sideModal2Text = document.querySelector('#sideModal2Text');
+const sideModal3 = document.getElementById('sideModal3');
 const icon3 = document.querySelector('#icon3');
-const sidebar3Text = document.querySelector('#sidebar3Text');
+const sideModal3Text = document.querySelector('#sideModal3Text');
 const title = document.querySelector('#title');
 
 let episodesTitle;
 let finalText;
 let episodeName;
 let isOpen = { side1: false, side2: false };
+
 const { start, end, experiences, words } = data;
 const wordsAvailable = Object.keys(words);
 
@@ -137,49 +138,49 @@ const toggleNav = (id) => {
 
 const openNav = (id) => {
   if (id === 'side1') {
-    sidebar1.style.width = '500px';
-    sidebar1Text.style.display = 'block';
+    sideModal1.style.width = '500px';
+    sideModal1Text.style.display = 'block';
     icon1.style.display = 'none';
     links.style.display = 'flex';
     wordsWrapper.style.paddingLeft = '570px';
   }
   if (id === 'side2') {
     closeNav('side1');
-    sidebar2.style.width = '600px';
-    sidebar2Text.style.display = 'block';
+    sideModal2.style.width = '600px';
+    sideModal2Text.style.display = 'block';
     icon2.style.display = 'none';
     wordsWrapper.style.paddingLeft = '630px';
   }
   if (id === 'side3') {
     closeNav('side2');
     closeNav('side1');
-    sidebar3.style.width = '580px';
-    sidebar3Text.style.display = 'block';
+    sideModal3.style.width = '580px';
+    sideModal3Text.style.display = 'block';
     icon3.style.display = 'none';
   }
 };
 
 const closeNav = (id) => {
   if (id === 'side1') {
-    sidebar1Text.style.display = 'none';
-    sidebar1.style.width = '30px';
-    sidebar2.style.width = '80px';
-    sidebar2Text.style.display = 'none';
+    sideModal1Text.style.display = 'none';
+    sideModal1.style.width = '30px';
+    sideModal2.style.width = '80px';
+    sideModal2Text.style.display = 'none';
     icon1.style.display = 'block';
     links.style.display = 'none';
     icon2.style.display = 'block';
   }
   if (id === 'side2') {
     closeNav('side1');
-    sidebar2Text.style.display = 'none';
-    sidebar2.style.width = '80px';
+    sideModal2Text.style.display = 'none';
+    sideModal2.style.width = '80px';
     icon2.style.display = 'block';
   }
   if (id === 'side3') {
     closeNav('side2');
     closeNav('side1');
-    sidebar3Text.style.display = 'none';
-    sidebar3.style.width = '130px';
+    sideModal3Text.style.display = 'none';
+    sideModal3.style.width = '130px';
     icon3.style.display = 'block';
   }
 

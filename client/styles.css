@@ -89,7 +89,7 @@ a {
   margin-left: 175px;
 }
 
-.sidebar {
+.sideModal {
   cursor: pointer;
   color: black;
   height: 100%;
@@ -104,36 +104,36 @@ a {
   padding: 10px;
 }
 
-.sidebar1 {
+.sideModal1 {
   z-index: 3;
 }
 
-.sidebar2 {
+.sideModal2 {
   z-index: 2;
   width: 80px;
   background-color: blue;
 }
 
-.sidebar3 {
+.sideModal3 {
   color: #fffff1;
   width: 130px;
   background-color: black;
 }
 
-#sidebar3Text,
-#sidebar1Text,
-#sidebar2Text {
+#sideModal3Text,
+#sideModal1Text,
+#sideModal2Text {
   display: none;
   padding: 0 15px 15px;
   margin: 0;
   font-size: 22px;
 }
-#sidebar2Text {
+#sideModal2Text {
   padding-left: 65px;
   color: #fffff7;
 }
 
-#sidebar3Text {
+#sideModal3Text {
   color: #fffff1;
   padding-left: 110px;
 }
