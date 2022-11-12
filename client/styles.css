@@ -3,8 +3,13 @@
   src: url('./fonts/KenokyLight.ttf');
 }
 
+@font-face {
+  font-family: FavoritStd-Regular;
+  src: url('./fonts/FavoritStd-Regular.woff');
+}
+
 body {
-  font-family: kenoky;
+  font-family: FavoritStd-Regular;
   text-align: justify;
   background-color: #fffff1;
 }
