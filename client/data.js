@@ -7,7 +7,7 @@ const data = {
     'Me cuelo entre la multitud que accede al Reina Sofía.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección.',
-    'He leído en la prensa que el Reina Sofía organizó su colección en ocho Episodios, así que me acerco a mirar.',
+    'He leído en la prensa que el Reina Sofía organizó su colección en ocho episodios, así que me acerco a mirar.',
     'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
     'He llegado al Reina Sofía siguiendo un pájaro extraño.',
@@ -116,6 +116,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/video-trans-americas-0',
         key: 'gran mapa',
       },
+      {
+        sentence:
+          'Miro durante cinco minutos la fotografía de un territorio llano y de apariencia adversa, que a la vez, me resulta poderosamente atrayente.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/vegas',
+        key: 'la fotografía',
+      },
     ],
     CELEBRACIÓN: [
       {
@@ -129,6 +135,12 @@ const data = {
           'Deseo estar en la fiesta que celebran los personajes de La Verbena de Maruja Mallo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/verbena',
         key: 'La Verbena',
+      },
+      {
+        sentence:
+          'Deseo ponerme el traje de lagarteranas de una fotografía y llevármelo esta noche de fiesta.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/lagarteranas',
+        key: 'una fotografía',
       },
     ],
     SILENCIO: [
@@ -146,7 +158,7 @@ const data = {
       },
       {
         sentence:
-          'Avanzo con asombro frente al silencio de las fotografías de paisajes de Bleda y Rosa',
+          'Avanzo con asombro frente al silencio de las fotografías de paisajes de Bleda y Rosa.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/mesa-rey-navas-tolosa-verano-1212',
         key: 'fotografías',
       },
@@ -208,7 +220,7 @@ const data = {
       },
       {
         sentence:
-          'Admiro el poder que transmite el póster de María María Acha-Kutscher.',
+          'Me planto frente a un póster de María María Acha-Kutscher, que me resulta empoderante.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/toma-calle-2011-madrid',
         key: 'póster',
       },
@@ -216,7 +228,7 @@ const data = {
     LÍNEAS: [
       {
         sentence:
-          'Saco una fotografía de las serpenteantes líneas de Pájaros en el espacio de Joan Miró.',
+          'Saco una fotografía de las serpenteantes líneas de Pájaros en el espacio de Joan Miró sin que nadie me mire.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/oiseaux-dans-lespace-pajaros-espacio',
         key: 'Pájaros en el espacio',
       },
@@ -259,6 +271,18 @@ const data = {
           'Atiendo el vídeo Una y otra vez de Sara Ramo, mirando con sorpresa los personajes que van apareciendo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/otra-vez',
         key: 'Una y otra vez',
+      },
+      {
+        sentence:
+          'Una secuencia geométrica en blanco y negro se repite en una obra de Soledad Sevilla.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sin-titulo-336',
+        key: 'una obra',
+      },
+      {
+        sentence:
+          'Busco una obra de Louise Lawler en el catálogo del museo, donde se explica cómo trabaja con la serialidad y la repetición.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/doubles-pairs-couples-dobles-pares-parejas',
+        key: 'una obra',
       },
     ],
     MAPA: [
@@ -304,22 +328,35 @@ const data = {
     HOGAR: [
       {
         sentence:
-          'Paso bajo el cuerpo de la Araña de Louise Bourgeois, y en lugar de intimidación, siento en la escultura una idea de cobijo.',
+          'Paso bajo el cuerpo de la Araña de Louise Bourgeois, y en lugar de intimidación, siento que me recoge como formando un hogar.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/spider-arana',
         key: 'Araña',
       },
       {
-        sentence: 'Camino junto a la ropa tendida en el hogar de Doña Concha.',
+        sentence:
+          'Camino con precaución junto a la ropa tendida en el hogar de Doña Concha, no sea que la vaya a manchar.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/dona-concha',
         key: 'ropa tendida',
+      },
+      {
+        sentence:
+          'Una mujer yace tumbada bajo una casa, como aplastada por su propio hogar.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/lying-house-casa-tumbada',
+        key: 'yace tumbada',
       },
     ],
     CREACIÓN: [
       {
         sentence:
           'Me detengo con impresión ante las preciosas páginas del Libro de la Creación de Lygia Pape.',
-        url: 'Libro de la Creación',
-        key: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-libro-creacion',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/livro-da-criacao-libro-creacion',
+        key: 'Libro de la Creación',
+      },
+      {
+        sentence:
+          'Me inclino con curiosidad ante una obra de Tapiès y me pregunto por su proceso de creación.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/superposition-matiere-grise-superposicion-materia-gris',
+        key: 'obra',
       },
     ],
     CUERPO: [
@@ -356,16 +393,15 @@ const data = {
         key: 'serie de fotografías',
       },
       {
-        sentence:
-          'Me sobrecoge mirar la enorme boca abierta representada en Sonido de Victoria Gil.',
+        sentence: 'Me sobrecoge mirar una pintura con una enorme boca abierta.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/sonido-0',
-        key: 'Sonido',
+        key: 'pintura',
       },
     ],
     FORMAS: [
       {
         sentence:
-          'Las formas de una pintura de Juan Gris me producen curiosidad',
+          'Las formas de una pintura de Juan Gris me producen curiosidad.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/table-du-musicien-mesa-musico',
         key: 'una pintura',
       },
@@ -427,7 +463,7 @@ const data = {
       },
       {
         sentence:
-          'El cansancio del trabajo a veces es tan grande... de pronto leo "Campesino, rotas tus cadenas, no consientas te opriman otros tiranos" en una litografía de Arturo Ballester',
+          'El cansancio del trabajo a veces es tan grande... de pronto leo "Campesino, rotas tus cadenas, no consientas te opriman otros tiranos" en una litografía de Arturo Ballester.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/campesino-rotas-tus-cadenas-no-consientas-opriman-otros-tiranos',
         key: '"Campesino, rotas tus cadenas, no consientas te opriman otros tiranos"',
       },
@@ -451,6 +487,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/beggar-mendigo',
         key: 'obra',
       },
+      {
+        sentence:
+          'En el interior de una inocente cajita, un astro traza su órbita sobre el mapa del cielo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/celestial-navigation-birds-navegacion-celestial-aves',
+        key: 'cajita',
+      },
     ],
     CASA: [
       {
@@ -463,7 +505,7 @@ const data = {
         sentence:
           'En la fotografía de lo que parece una casa abandonada, una persona enmascarada me devuelve la mirada.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/arthur-rimbaud-new-york-arthur-rimbaud-nueva-york-0',
-        key: 'una fotografía',
+        key: 'la fotografía',
       },
       {
         sentence:
@@ -485,6 +527,12 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/sin-titulo-poniente',
         key: 'Poniente',
       },
+      {
+        sentence:
+          'Más allá de unas misteriosas torres tubulares, me pregunto si en la lejanía se estará poniendo o saliendo el sol.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/paisaje-surrealista',
+        key: 'misteriosas torres tubulares',
+      },
     ],
     ESPACIO: [
       {
@@ -499,6 +547,11 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/untitled-floor-sculpture-series-sin-titulo-serie-escultura-suelo',
         key: 'serie de esculturas',
       },
+      {
+        sentence: 'Una nave espacial de colores atraviesa el espacio exterior.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/viajeros-eter-1',
+        key: 'nave espacial',
+      },
     ],
     VIDA: [
       {
@@ -511,7 +564,7 @@ const data = {
     AMOR: [
       {
         sentence:
-          'Contemplo con ternura (y algo de vergüenza) la mirada amorosa que se intercambian Adán y Eva en la pintura de Rosario de Velasco',
+          'Contemplo con ternura (y algo de vergüenza) la mirada amorosa que se intercambian Adán y Eva en la pintura de Rosario de Velasco.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/adan-eva-0',
         key: 'Adán y Eva',
       },
@@ -679,12 +732,6 @@ const data = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vinedo-pajaros',
         key: 'Viñedo y Pájaros',
       },
-      {
-        sentence:
-          'Me conmueve la amistad de la fotografía de Las dos Fridas de Las Yeguas del Apocalipsis.',
-        url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
-        key: 'Las dos Fridas',
-      },
     ],
     VIOLENCIA: [
       {
@@ -708,6 +755,12 @@ const data = {
           'Trato de entender lo que sucede en las superficies pintadas de los televisores de Agustín Parejo School.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/lenin-cumbe',
         key: 'televisores',
+      },
+      {
+        sentence:
+          'Me detengo durante cinco minutos a observar lo que sucede en los televisores de una instalación.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/pm-magazine',
+        key: 'una instalación',
       },
     ],
   },
