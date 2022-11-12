@@ -10,18 +10,58 @@
 
 body {
   font-family: FavoritStd-Regular;
-  text-align: justify;
   background-color: #fffff1;
+  font-size: 24px;
+  cursor: default;
+  max-height: 100vh;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: blue;
 }
 
-input:focus {
-  outline: none;
+::selection {
+  color: white;
+  background: blue;
+}
+button {
+  border: 0;
+  background: transparent;
 }
 
-h4 {
+h4,
+h1,
+h2 {
   margin: 0;
-  font-size: 26px;
   font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  position: fixed;
+  top: 10px;
+}
+
+.menu--item {
+  max-width: 120px;
+  margin-left: 30px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu--item__label {
+  font-size: 24px;
+}
+
+.menu--item__label:hover {
+  text-decoration: underline;
 }
 
 a {
@@ -44,124 +84,55 @@ a {
 #wordsWrapper {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 165px;
-  padding-top: 20px;
-}
-
-#icon3,
-#icon1,
-#icon2 {
-  font-size: 35px;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  margin: -6px;
-}
-
-#icon2 {
-  margin-left: 50px;
-}
-
-#icon3 {
-  margin-left: 100px;
-  color: #fffff1;
+  max-width: 55%;
+  max-height: 600px;
 }
 
 #episode {
   font-size: 24px;
-  margin-left: 175px;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 .word {
   padding: 10px;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 30px;
   font-family: sans-serif;
   border: 1px solid black;
   border-radius: 50px;
   margin: 5px;
 }
 
+.word:hover,
 .blue {
   background-color: blue;
   color: #fffff1;
 }
 
-#info,
-#title {
-  margin-top: 40px;
+.episode__title {
   font-size: 22px;
-  padding-bottom: 10px;
-  margin-left: 175px;
 }
 
-.sideModal {
-  cursor: pointer;
-  color: black;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
-  width: 30px;
-  border-right: 3px solid black;
-  background: #fffff1;
-  padding: 10px;
+.main {
+  display: flex;
+  padding-top: 130px;
+  text-align: justify;
+  max-height: 100vh;
 }
 
-.sideModal1 {
-  z-index: 3;
+.rightSide {
+  width: 50%;
+  margin: 0 20px 0 30px;
 }
 
-.sideModal2 {
-  z-index: 2;
-  width: 80px;
-  background-color: blue;
-}
-
-.sideModal3 {
-  color: #fffff1;
-  width: 130px;
+.dot {
+  height: 15px;
+  width: 15px;
   background-color: black;
+  border-radius: 50%;
+  display: inline-block;
 }
-
-#sideModal3Text,
-#sideModal1Text,
-#sideModal2Text {
-  display: none;
-  padding: 0 15px 15px;
-  margin: 0;
-  font-size: 22px;
-}
-#sideModal2Text {
-  padding-left: 65px;
-  color: #fffff7;
-}
-
-#sideModal3Text {
-  color: #fffff1;
-  padding-left: 110px;
-}
-
-#main {
-  transition: margin-left 0.5s;
-}
-
-#links {
-  display: none;
-  padding-left: 15px;
-  padding-top: 0;
-}
-.link {
-  margin: 10px;
-}
-#sideBarTitle {
-  font-size: 28px;
-}
-.episodesList {
-  margin-left: 165px;
-  font-size: 24px;
-  width: 70%;
-  font-family: sans-serif;
-}
-

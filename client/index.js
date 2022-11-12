@@ -1,24 +1,14 @@
 const wordsWrapper = document.getElementById('wordsWrapper');
 const episode = document.querySelector('#episode');
-const links = document.querySelector('#links');
-const info = document.querySelector('#info');
 const main = document.getElementById('main');
-const sideModal1 = document.getElementById('sideModal1');
-const icon1 = document.querySelector('#icon1');
-const sideModal1Text = document.querySelector('#sideModal1Text');
-const episodeslist = document.querySelector('#episodeslist');
-const sideModal2 = document.getElementById('sideModal2');
-const icon2 = document.querySelector('#icon2');
-const sideModal2Text = document.querySelector('#sideModal2Text');
-const sideModal3 = document.getElementById('sideModal3');
-const icon3 = document.querySelector('#icon3');
-const sideModal3Text = document.querySelector('#sideModal3Text');
+const episodesList = document.querySelector('#episodesList');
 const title = document.querySelector('#title');
+const episodeWrapper = document.querySelector('#episodeWrapper');
+const saveEpisodeButton = document.querySelector('#saveEpisodeButton');
 
 let episodesTitle;
 let finalText;
 let episodeName;
-let isOpen = { side1: false, side2: false };
 
 const { start, end, experiences, words } = data;
 const wordsAvailable = Object.keys(words);
@@ -26,7 +16,9 @@ const wordsAvailable = Object.keys(words);
 let selectedWords = [];
 
 const createEpisode = () => {
-  info.style.display = 'none';
+  episodesList.classList.add('hidden');
+  episodeWrapper.classList.remove('hidden');
+  saveEpisodeButton.classList.remove('hidden');
 
   const randomeStartIdx = getRandomInt(start.length);
   const randomStart = start[randomeStartIdx];
@@ -58,11 +50,11 @@ const createEpisode = () => {
     words[word3][word3Idx].key
   );
 
-  const episodeNameNode = `<span class="episodeName"> ${episodeName}<span>`;
-  finalText = `${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
+  const episodeNameNode = `<span class="episodeName"> ${episodeName} — <span>`;
+  finalText = ` ${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
   episodesTitle = getTitle();
-  episode.innerHTML = finalText;
-  title.innerHTML = episodesTitle;
+  episode.innerHTML = `<span class="dot"></span> ${finalText}`;
+  title.innerHTML = `episodio.TXT — ${episodesTitle} `;
 
   if (episodeName) {
     title.innerHTML += episodeNameNode;
@@ -78,14 +70,8 @@ const addLink = (sentence, url, key) => {
 };
 
 const resetText = () => {
-  startSentence.innerText = '';
-  endSentence.innerText = '';
-  textNode0.innerHTML = '';
-  textNode1.innerHTML = '';
-  textNode2.innerHTML = '';
-  textNode3.innerHTML = '';
+  finalText = '';
   title.innerHTML = '';
-  info.style.display = 'block';
 };
 
 const removeWord = (word) => {
@@ -119,78 +105,27 @@ const addWord = (word) => {
 
 const createWordsNodes = () => {
   wordsAvailable.forEach((word) => {
-    const span = document.createElement('span');
-    span.innerText = word;
-    span.onclick = () => addWord(word);
-    span.className = 'word';
-    span.id = word;
+    const li = document.createElement('li');
+    li.innerText = word;
+    li.onclick = () => addWord(word);
+    li.className = 'word';
+    li.id = word;
 
-    return wordsWrapper.appendChild(span);
+    return wordsWrapper.appendChild(li);
   });
 };
 
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
-const toggleNav = (id) => {
-  isOpen[id] ? closeNav(id) : openNav(id);
-  isOpen[id] = !isOpen[id];
-};
-
-const openNav = (id) => {
-  if (id === 'side1') {
-    sideModal1.style.width = '500px';
-    sideModal1Text.style.display = 'block';
-    icon1.style.display = 'none';
-    links.style.display = 'flex';
-    wordsWrapper.style.paddingLeft = '570px';
-  }
-  if (id === 'side2') {
-    closeNav('side1');
-    sideModal2.style.width = '600px';
-    sideModal2Text.style.display = 'block';
-    icon2.style.display = 'none';
-    wordsWrapper.style.paddingLeft = '630px';
-  }
-  if (id === 'side3') {
-    closeNav('side2');
-    closeNav('side1');
-    sideModal3.style.width = '580px';
-    sideModal3Text.style.display = 'block';
-    icon3.style.display = 'none';
-  }
-};
-
-const closeNav = (id) => {
-  if (id === 'side1') {
-    sideModal1Text.style.display = 'none';
-    sideModal1.style.width = '30px';
-    sideModal2.style.width = '80px';
-    sideModal2Text.style.display = 'none';
-    icon1.style.display = 'block';
-    links.style.display = 'none';
-    icon2.style.display = 'block';
-  }
-  if (id === 'side2') {
-    closeNav('side1');
-    sideModal2Text.style.display = 'none';
-    sideModal2.style.width = '80px';
-    icon2.style.display = 'block';
-  }
-  if (id === 'side3') {
-    closeNav('side2');
-    closeNav('side1');
-    sideModal3Text.style.display = 'none';
-    sideModal3.style.width = '130px';
-    icon3.style.display = 'block';
-  }
-
-  wordsWrapper.style.paddingLeft = '165px';
-};
-
-const setEpisodes = (episodes) =>
+const setEpisodes = (episodes) => {
+  episodeWrapper.classList.add('hidden');
+  saveEpisodeButton.classList.add('hidden');
+  episodesList.classList.remove('hidden');
+  episodesList.innerHTML = '';
   episodes.map((episode) => {
-    episodeslist.innerHTML += `<div><span>${episode.title}</span><br>${episode.text}<div></br>`;
+    episodesList.innerHTML += `<div><span>episodio.TXT #${episode.id} — ${episode.title}</span><br><span class="dot"></span> ${episode.text}<div></br>`;
   });
+};
 
 const getEpisodes = () => fetchEpisodes(setEpisodes);
 
