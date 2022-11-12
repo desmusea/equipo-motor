@@ -114,7 +114,7 @@ const createEpisode = () => {
   finalText = ` ${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
   episodesTitle = getTitle();
   episode.innerHTML = finalText;
-  title.innerHTML = `episodio.TXT — ${episodesTitle} `;
+  title.innerHTML = `<span class="dot"></span> episodio.TXT — ${episodesTitle} `;
 
   if (episodeName) {
     title.innerHTML += episodeNameNode;
@@ -185,7 +185,7 @@ const setEpisodes = (episodes) => {
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
     episodes.map((episode) => {
-      episodesList.innerHTML += `<div><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<div></br><br><br>`;
+      episodesList.innerHTML += `<div><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<div></br><br>`;
     });
   } else {
     episodesList.classList.add('hidden');

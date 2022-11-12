@@ -118,13 +118,9 @@ a {
   color: #fffff1;
 }
 
-.episode__title {
-  font-size: 22px;
-}
-
 .main {
   display: flex;
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: justify;
   max-height: 100vh;
 }
