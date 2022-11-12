@@ -9,7 +9,10 @@ const aboutEquipoMotor = document.querySelector('#aboutEquipoMotor');
 const aboutEpisodes = document.querySelector('#aboutEpisodes');
 const aboutCreatingEpisodes = document.querySelector('#aboutCreatingEpisodes');
 const links = document.querySelector('#links');
+const menuItems = document.querySelectorAll('.menu--list__item-label');
+
 links.classList.add('hidden');
+
 const aboutNodes = {
   aboutEquipoMotor,
   aboutEpisodes,
@@ -25,17 +28,43 @@ const wordsAvailable = Object.keys(words);
 let selectedWords = [];
 
 const hideData = (id) => {
-  console.log('entra', id);
   switch (id) {
     case '#aboutEquipoMotor':
+      menuItems[0].classList.add('selected');
+      menuItems[1].classList.remove('selected');
+      menuItems[2].classList.remove('selected');
+      menuItems[3].classList.remove('selected');
+
       aboutEpisodes.classList.add('hidden');
       aboutCreatingEpisodes.classList.add('hidden');
+      break;
     case '#aboutEpisodes':
+      menuItems[1].classList.add('selected');
+      menuItems[0].classList.remove('selected');
+      menuItems[2].classList.remove('selected');
+      menuItems[3].classList.remove('selected');
+
       aboutCreatingEpisodes.classList.add('hidden');
       aboutEquipoMotor.classList.add('hidden');
+      break;
     case '#aboutCreatingEpisodes':
+      menuItems[0].classList.remove('selected');
+      menuItems[1].classList.remove('selected');
+      menuItems[2].classList.add('selected');
+      menuItems[3].classList.remove('selected');
+
       aboutEpisodes.classList.add('hidden');
       aboutEquipoMotor.classList.add('hidden');
+      break;
+    default:
+      menuItems[0].classList.remove('selected');
+      menuItems[1].classList.remove('selected');
+      menuItems[2].classList.remove('selected');
+      menuItems[3].classList.add('selected');
+
+      aboutEpisodes.classList.add('hidden');
+      aboutEquipoMotor.classList.add('hidden');
+      aboutCreatingEpisodes.classList.add('hidden');
   }
 };
 
@@ -45,6 +74,7 @@ const displayInfo = (id) => {
     ? document.querySelector(id).classList.remove('hidden')
     : document.querySelector(id).classList.add('hidden');
 };
+
 const createEpisode = () => {
   episodesList.classList.add('hidden');
   episodeWrapper.classList.remove('hidden');
@@ -148,13 +178,19 @@ const createWordsNodes = () => {
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const setEpisodes = (episodes) => {
-  episodeWrapper.classList.add('hidden');
-  saveEpisodeButton.classList.add('hidden');
-  episodesList.classList.remove('hidden');
-  episodesList.innerHTML = '';
-  episodes.map((episode) => {
-    episodesList.innerHTML += `<div><span>episodio.TXT #${episode.id} — ${episode.title}</span><br><span class="dot"></span> ${episode.text}<div></br>`;
-  });
+  if (episodesList.classList.contains('hidden')) {
+    hideData();
+    episodeWrapper.classList.add('hidden');
+    saveEpisodeButton.classList.add('hidden');
+    episodesList.classList.remove('hidden');
+    episodesList.innerHTML = '';
+    episodes.map((episode) => {
+      episodesList.innerHTML += `<div><span>episodio.TXT #${episode.id} — ${episode.title}</span><br><span class="dot"></span> ${episode.text}<div></br>`;
+    });
+  } else {
+    episodesList.classList.add('hidden');
+    menuItems[3].classList.remove('selected');
+  }
 };
 
 const getEpisodes = () => fetchEpisodes(setEpisodes);
