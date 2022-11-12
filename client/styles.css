@@ -48,19 +48,21 @@ ul {
   position: fixed;
   top: 10px;
 }
-
-.menu--item {
-  max-width: 120px;
+.menu--list {
+  display: flex;
+}
+.menu--list__item {
+  max-width: 125px;
   margin-left: 30px;
   text-align: left;
   cursor: pointer;
 }
 
-.menu--item__label {
+.menu--list__item-label {
   font-size: 24px;
 }
 
-.menu--item__label:hover {
+.menu--list__item-label:hover {
   text-decoration: underline;
 }
 
@@ -105,6 +107,7 @@ a {
   border: 1px solid black;
   border-radius: 50px;
   margin: 5px;
+  max-height: 32px;
 }
 
 .word:hover,
@@ -135,4 +138,12 @@ a {
   background-color: black;
   border-radius: 50%;
   display: inline-block;
+}
+
+.link{
+  margin-right: 10px;
+}
+
+.about {
+  padding-top: 130px;
 }
