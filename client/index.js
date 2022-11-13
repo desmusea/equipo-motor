@@ -34,7 +34,7 @@ const hideData = (id) => {
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.remove('selected');
-
+      links.classList.remove('hidden');
       aboutEpisodes.classList.add('hidden');
       aboutCreatingEpisodes.classList.add('hidden');
       break;
@@ -46,6 +46,7 @@ const hideData = (id) => {
 
       aboutCreatingEpisodes.classList.add('hidden');
       aboutEquipoMotor.classList.add('hidden');
+      links.classList.add('hidden');
       break;
     case '#aboutCreatingEpisodes':
       menuItems[0].classList.remove('selected');
@@ -55,6 +56,8 @@ const hideData = (id) => {
 
       aboutEpisodes.classList.add('hidden');
       aboutEquipoMotor.classList.add('hidden');
+      links.classList.add('hidden');
+
       break;
     default:
       menuItems[0].classList.remove('selected');
@@ -65,6 +68,7 @@ const hideData = (id) => {
       aboutEpisodes.classList.add('hidden');
       aboutEquipoMotor.classList.add('hidden');
       aboutCreatingEpisodes.classList.add('hidden');
+      links.classList.add('hidden');
   }
 };
 
