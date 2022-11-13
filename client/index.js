@@ -75,6 +75,16 @@ const displayInfo = (id) => {
     : document.querySelector(id).classList.add('hidden');
 };
 
+const hideInfo = () => {
+  menuItems[0].classList.remove('selected');
+  menuItems[1].classList.remove('selected');
+  menuItems[2].classList.remove('selected');
+
+  aboutEpisodes.classList.add('hidden');
+  aboutEquipoMotor.classList.add('hidden');
+  aboutCreatingEpisodes.classList.add('hidden');
+};
+
 const createEpisode = () => {
   episodesList.classList.add('hidden');
   episodeWrapper.classList.remove('hidden');

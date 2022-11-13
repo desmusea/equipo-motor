@@ -471,7 +471,7 @@ const data = {
         sentence:
           'Las ansiedades cotidianas del trabajo me asfixian. Ese lienzo del fondo me ordena: "¡Pare ahora!". Es de Pietrina Checcacci',
         url: 'https://www.museoreinasofia.es/coleccion/obra/pare-agora-pare-ahora-0',
-        key: 'Pare ahora',
+        key: '¡Pare ahora!',
       },
     ],
     INOCENCIA: [
