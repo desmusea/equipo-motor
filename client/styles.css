@@ -1,9 +1,4 @@
 @font-face {
-  font-family: kenoky;
-  src: url('./fonts/KenokyLight.ttf');
-}
-
-@font-face {
   font-family: FavoritStd-Regular;
   src: url('./fonts/FavoritStd-Regular.woff');
 }
@@ -56,12 +51,16 @@ button {
 }
 
 .saveButton {
-  font-size: 22px;
-  color: blue;
+  font-size: 24px;
   padding: 0;
   padding-top: 10px;
-  text-decoration: underline;
   cursor: pointer;
+  max-width: 125px;
+  text-align: left;
+}
+
+.saveButton:hover {
+  text-decoration: underline;
 }
 
 h4,
