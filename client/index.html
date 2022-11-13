@@ -14,29 +14,29 @@
         <nav class="menu">
             <h1>equipoMotor. TXT — máquina de ficción</h1>
             <ul class="menu--list">
-                <li>
-                    <button class="menu--list__item" onclick="displayInfo('#aboutEquipoMotor')">
-                        <h2 class="menu--list__item-label">→ qué fue equipoMotor TXT 2020</h2>
+                <li class="menu--list__item">
+                    <button class="menu--list__item-button" onclick="displayInfo('#aboutEquipoMotor')">
+                        → qué fue equipoMotor TXT 2020
                     </button>
                 </li>
-                <li>
-                    <button class="menu--list__item" onclick="displayInfo('#aboutEpisodes')">
-                        <h2 class="menu--list__item-label">→ qué son los episodios</h2>
+                <li class="menu--list__item">
+                    <button class="menu--list__item-button" onclick="displayInfo('#aboutEpisodes')">
+                        → qué son los episodios
                     </button>
                 </li>
-                <li>
-                    <button class="menu--list__item" onclick="displayInfo('#aboutCreatingEpisodes')">
-                        <h2 class="menu--list__item-label">→ cómo crear un episodio</h2>
+                <li class="menu--list__item">
+                    <button class="menu--list__item-button"  onclick="displayInfo('#aboutCreatingEpisodes')">
+                        → cómo crear un episodio
                     </button>
                 </li>
-                <li>
-                    <button class="menu--list__item" onclick="getEpisodes()">
-                        <h2 class="menu--list__item-label">→ ver episodios creados</h2>
+                <li class="menu--list__item">
+                    <button class="menu--list__item-button" onclick="getEpisodes()">
+                        → ver episodios creados
                     </button>
                 </li>
             </ul>
         </nav>
-        <article class="about" >
+        <article class="about">
             <p class="about__text hidden" id="aboutEquipoMotor">
                 La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor">equipoMotor</a>,
                 equipoMotor.TXT, tuvo
@@ -121,7 +121,8 @@
                 <h4 id="title" class="episode__title"></h4>
                 <p id="episode" class="episode">
                 </p>
-                <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">Guardar episodio</button>
+                <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">Guardar
+                    episodio</button>
             </div>
             <ul id="episodesList" class="hidden"></ul>
         </article>

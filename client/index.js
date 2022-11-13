@@ -9,7 +9,7 @@ const aboutEquipoMotor = document.querySelector('#aboutEquipoMotor');
 const aboutEpisodes = document.querySelector('#aboutEpisodes');
 const aboutCreatingEpisodes = document.querySelector('#aboutCreatingEpisodes');
 const links = document.querySelector('#links');
-const menuItems = document.querySelectorAll('.menu--list__item-label');
+const menuItems = document.querySelectorAll('.menu--list__item-button');
 
 links.classList.add('hidden');
 

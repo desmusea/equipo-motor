@@ -15,16 +15,39 @@ body {
   cursor: default;
   max-height: 100vh;
   margin: 0;
+  color: #1e202a;
 }
+
 ::-moz-selection {
-  /* Code for Firefox */
-  color: white;
-  background: blue;
+  color: #1e202a;
+  background: #fffff1;
 }
 
 ::selection {
-  color: white;
-  background: blue;
+  color:  #fffff1;
+  background: #1e202a;
+}
+
+::-webkit-scrollbar {
+  width: 5px; 
+  height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1e202a;
+  outline: 1px solid #1e202a;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+}
+
+@-moz-document url-prefix() {
+  .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: #1e202a;
+  }
 }
 
 button {
@@ -71,18 +94,22 @@ a {
 }
 
 .menu--list__item {
-  max-width: 125px;
+  width: 125px;
   margin-left: 30px;
-  text-align: left;
   cursor: pointer;
 }
 
-.menu--list__item-label {
+.menu--list__item:first-child {
+  width: 145px;
+}
+
+.menu--list__item-button {
   font-size: 24px;
+  text-align: left;
 }
 
 .selected,
-.menu--list__item-label:hover {
+.menu--list__item-button:hover {
   text-decoration: underline;
 }
 
@@ -139,7 +166,7 @@ a {
   cursor: pointer;
   font-size: 30px;
   font-family: sans-serif;
-  border: 1px solid black;
+  border: 1px solid #1e202a;
   border-radius: 50px;
   margin: 5px;
   max-height: 32px;
@@ -168,7 +195,7 @@ a {
 .dot {
   height: 15px;
   width: 15px;
-  background-color: black;
+  background-color: #1e202a;
   border-radius: 50%;
   display: inline-block;
 }
