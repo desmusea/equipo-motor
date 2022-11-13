@@ -25,7 +25,7 @@
                     </button>
                 </li>
                 <li class="menu--list__item">
-                    <button class="menu--list__item-button"  onclick="displayInfo('#aboutCreatingEpisodes')">
+                    <button class="menu--list__item-button" onclick="displayInfo('#aboutCreatingEpisodes')">
                         → cómo crear un episodio
                     </button>
                 </li>
@@ -114,9 +114,9 @@
             </p>
         </article>
     </header>
-    <main class="main" onclick="hideInfo()">
-        <ul id="wordsWrapper"></ul>
-        <article class="rightSide">
+    <main class="main">
+        <ul id="wordsWrapper" onclick="hideInfo()"></ul>
+        <article class="rightSide" onclick="hideInfo()">
             <div id="episodeWrapper">
                 <h4 id="title" class="episode__title"></h4>
                 <p id="episode" class="episode">
