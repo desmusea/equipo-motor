@@ -51,6 +51,10 @@ app.get('/episodes', (req, res) => {
   res.send(episodes);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT} ✨`);
+app.listen(PORT, (err) => {
+  if (err) {
+    console.log(`Error running on port ${PORT} 🤦🏻‍♀️`);
+  } else {
+    console.log(`Server is running on port ${PORT} ✨`);
+  }
 });
