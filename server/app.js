@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
+const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
   origin: '*',
@@ -50,6 +51,6 @@ app.get('/episodes', (req, res) => {
   res.send(episodes);
 });
 
-app.listen(3000, () => {
-  console.log('Server runs on port 3000 ✨');
+app.listen(PORT, () => {
+  console.log('Server is running ✨');
 });
