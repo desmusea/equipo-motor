@@ -199,7 +199,7 @@ const setEpisodes = (episodes) => {
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
     episodes.map((episode) => {
-      episodesList.innerHTML += `<div><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<div></br><br>`;
+      episodesList.innerHTML += `<li><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<li></br><br>`;
     });
   } else {
     episodesList.classList.add('hidden');
