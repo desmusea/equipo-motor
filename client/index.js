@@ -210,7 +210,7 @@ const setEpisodes = (episodes) => {
 const getEpisodes = () => fetchEpisodes(setEpisodes);
 
 const postEpisode = () =>
-  saveEpisode('http://localhost:3000/episodes', {
+  saveEpisode('https://equipomotor.onrender.com/', {
     text: finalText,
     title: episodesTitle,
   });
