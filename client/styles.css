@@ -3,15 +3,17 @@
   src: url('./fonts/FavoritStd-Regular.woff');
 }
 
+* {
+  font-size: 24px;
+  color: #1e202a;
+}
+
 body {
   font-family: FavoritStd-Regular;
   background-color: #fffff1;
-  font-size: 24px;
   cursor: default;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
-  color: #1e202a;
 }
 
 ::-moz-selection {
@@ -131,17 +133,13 @@ a {
   margin-bottom: 20px;
 }
 
-.button {
-  font-family: happy-times;
-  font-size: 22px;
-  font-weight: normal;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid blue;
-  cursor: pointer;
-  color: blue;
-  font-family: kenoky;
+.button--inline {
+  font-size: 24px;
   padding: 0;
+  font-family: 'FavoritStd-Regular';
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
 }
 
 .links {
@@ -186,7 +184,8 @@ a {
 
 .rightSide {
   width: 50%;
-  margin-left:30px;
+  margin-left: 30px;
+  margin-right: 10px;
 }
 
 .episodesList {

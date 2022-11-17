@@ -10,6 +10,8 @@ const aboutEpisodes = document.querySelector('#aboutEpisodes');
 const aboutCreatingEpisodes = document.querySelector('#aboutCreatingEpisodes');
 const links = document.querySelector('#links');
 const menuItems = document.querySelectorAll('.menu--list__item-button');
+const loader = document.querySelector('#loader');
+const successMessage = document.querySelector('#successMessage');
 
 links.classList.add('hidden');
 
@@ -157,7 +159,10 @@ const removeWord = (word) => {
 const selectWord = (word) =>
   selectedWords.includes(word) ? removeWord(word) : selectedWords.push(word);
 
+const unselectWords = () => selectedWords.forEach((word) => removeWord(word));
+
 const addWord = (word) => {
+  successMessage.classList.add('hidden');
   const currentWord = document.getElementById(word);
   currentWord.classList += ' blue';
   if (selectedWords.length < 2) {
@@ -192,15 +197,19 @@ const createWordsNodes = () => {
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const setEpisodes = (episodes) => {
+  successMessage.classList.add('hidden');
   if (episodesList.classList.contains('hidden')) {
     hideData();
     episodeWrapper.classList.add('hidden');
     saveEpisodeButton.classList.add('hidden');
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
-    episodes.map((episode) => {
-      episodesList.innerHTML += `<li><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<li></br><br>`;
-    });
+    episodes
+      .slice(0)
+      .reverse()
+      .map((episode) => {
+        episodesList.innerHTML += `<li><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<li></br><br>`;
+      });
   } else {
     episodesList.classList.add('hidden');
     menuItems[3].classList.remove('selected');
@@ -209,10 +218,19 @@ const setEpisodes = (episodes) => {
 
 const getEpisodes = () => fetchEpisodes(setEpisodes);
 
-const postEpisode = () =>
+const postEpisode = () => {
+  loader.classList.remove('hidden');
+  episode.innerHTML = null;
+  saveEpisodeButton.classList.add('hidden');
+  title.innerHTML = null;
+  unselectWords();
   saveEpisode('https://equipomotor.onrender.com/episodes', {
     text: finalText,
     title: episodesTitle,
+  }).then(() => {
+    loader.classList.add('hidden');
+    successMessage.classList.remove('hidden');
   });
+};
 
 createWordsNodes();
