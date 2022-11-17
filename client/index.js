@@ -5,90 +5,61 @@ const episodesList = document.querySelector('#episodesList');
 const title = document.querySelector('#title');
 const episodeWrapper = document.querySelector('#episodeWrapper');
 const saveEpisodeButton = document.querySelector('#saveEpisodeButton');
-const aboutEquipoMotor = document.querySelector('#aboutEquipoMotor');
-const aboutEpisodes = document.querySelector('#aboutEpisodes');
-const aboutCreatingEpisodes = document.querySelector('#aboutCreatingEpisodes');
 const links = document.querySelector('#links');
 const menuItems = document.querySelectorAll('.menu--list__item-button');
 const loader = document.querySelector('#loader');
 const successMessage = document.querySelector('#successMessage');
+const aboutWrapper = document.querySelector('#aboutWrapper');
 
-links.classList.add('hidden');
-
-const aboutNodes = {
-  aboutEquipoMotor,
-  aboutEpisodes,
-  aboutCreatingEpisodes,
-};
 let episodesTitle;
 let finalText;
 let episodeName;
 
-const { start, end, experiences, words } = data;
+const { start, end, experiences, words } = sentences;
+const { equipoMotor, instructions, episodes } = about;
 const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
 
 const hideData = (id) => {
   switch (id) {
-    case '#aboutEquipoMotor':
+    case 'equipoMotor':
       menuItems[0].classList.add('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.remove('selected');
-      links.classList.remove('hidden');
-      aboutEpisodes.classList.add('hidden');
-      aboutCreatingEpisodes.classList.add('hidden');
       break;
-    case '#aboutEpisodes':
+    case 'episodes':
       menuItems[1].classList.add('selected');
       menuItems[0].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.remove('selected');
-
-      aboutCreatingEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      links.classList.add('hidden');
       break;
-    case '#aboutCreatingEpisodes':
+    case 'instructions':
       menuItems[0].classList.remove('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.add('selected');
       menuItems[3].classList.remove('selected');
-
-      aboutEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      links.classList.add('hidden');
-
       break;
     default:
       menuItems[0].classList.remove('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.add('selected');
-
-      aboutEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      aboutCreatingEpisodes.classList.add('hidden');
-      links.classList.add('hidden');
+      aboutWrapper.innerHTML = null;
   }
 };
 
 const displayInfo = (id) => {
+  episodesList.classList.add('hidden');
+  aboutWrapper.innerHTML = about[id];
   hideData(id);
-  document.querySelector(id).classList.contains('hidden')
-    ? document.querySelector(id).classList.remove('hidden')
-    : document.querySelector(id).classList.add('hidden');
 };
 
 const hideInfo = () => {
   menuItems[0].classList.remove('selected');
   menuItems[1].classList.remove('selected');
   menuItems[2].classList.remove('selected');
-
-  aboutEpisodes.classList.add('hidden');
-  aboutEquipoMotor.classList.add('hidden');
-  aboutCreatingEpisodes.classList.add('hidden');
 };
 
 const createEpisode = () => {
@@ -198,12 +169,15 @@ const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const setEpisodes = (episodes) => {
   successMessage.classList.add('hidden');
+
   if (episodesList.classList.contains('hidden')) {
+    console.log('entra')
     hideData();
     episodeWrapper.classList.add('hidden');
     saveEpisodeButton.classList.add('hidden');
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
+    console.log(episodesList, episodes)
     episodes
       .slice(0)
       .reverse()

@@ -86,9 +86,6 @@ a {
 
 .menu {
   display: flex;
-  position: fixed;
-  top: 10px;
-  z-index: 1;
 }
 
 .menu--list {
@@ -117,20 +114,7 @@ a {
 
 .header {
   padding: 20px 10px;
-}
-
-.about {
-  padding-top: 120px;
-  position: fixed;
-  background-color: #fffff1;
-  width: 100vw;
-  left: 0;
-  top: 0;
-}
-
-.about__text {
-  margin: 10px;
-  margin-bottom: 20px;
+  height: 80px;
 }
 
 .button--inline {
@@ -153,16 +137,17 @@ a {
 
 .main {
   display: flex;
-  padding-top: 100px;
   text-align: justify;
-  max-height: 100vh;
+  height: calc(100vh - 150px);
+  margin-top: 20px;
 }
 
 #wordsWrapper {
   display: flex;
   flex-wrap: wrap;
   max-width: 55%;
-  max-height: 600px;
+  padding-bottom: 10px;
+  max-height: 500px;
 }
 
 .word {
@@ -189,9 +174,9 @@ a {
 }
 
 .episodesList {
-  height: calc(100vh - 20%);
   overflow: auto;
   padding-right: 20px;
+  height: calc(100vh - 120px);
 }
 
 #episode {
