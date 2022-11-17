@@ -171,13 +171,11 @@ const setEpisodes = (episodes) => {
   successMessage.classList.add('hidden');
 
   if (episodesList.classList.contains('hidden')) {
-    console.log('entra')
     hideData();
     episodeWrapper.classList.add('hidden');
     saveEpisodeButton.classList.add('hidden');
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
-    console.log(episodesList, episodes)
     episodes
       .slice(0)
       .reverse()
