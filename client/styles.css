@@ -147,18 +147,18 @@ a {
   flex-wrap: wrap;
   max-width: 55%;
   padding-bottom: 10px;
-  max-height: 500px;
+  height: calc(100vh - 150px);
+  align-content: flex-start;
 }
 
 .word {
   padding: 10px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.2rem;
   font-family: sans-serif;
   border: 1px solid #1e202a;
   border-radius: 50px;
   margin: 5px;
-  max-height: 32px;
 }
 
 .word:hover,
@@ -176,7 +176,7 @@ a {
 .episodesList {
   overflow: auto;
   padding-right: 20px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 150px);
 }
 
 #episode {

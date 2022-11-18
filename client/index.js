@@ -169,6 +169,7 @@ const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const setEpisodes = (episodes) => {
   successMessage.classList.add('hidden');
+  loader.classList.add('hidden');
 
   if (episodesList.classList.contains('hidden')) {
     hideData();
@@ -188,9 +189,15 @@ const setEpisodes = (episodes) => {
   }
 };
 
-const getEpisodes = () => fetchEpisodes(setEpisodes);
+const getEpisodes = () => {
+  successMessage.classList.add('hidden');
+  loader.textContent = 'Cargando episodios...';
+  loader.classList.remove('hidden');
+  fetchEpisodes(setEpisodes);
+};
 
 const postEpisode = () => {
+  loader.textContent = 'Guardando tu episodio...';
   loader.classList.remove('hidden');
   episode.innerHTML = null;
   saveEpisodeButton.classList.add('hidden');

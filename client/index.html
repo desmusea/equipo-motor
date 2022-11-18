@@ -41,7 +41,7 @@
         <ul id="wordsWrapper" onclick="hideInfo()"></ul>
         <article class="rightSide" onclick="hideInfo()">
             <div id="episodeWrapper">
-                <div class="hidden" id="loader">Guardando tu episodio...</div>
+                <div class="hidden" id="loader"></div>
                 <div class="hidden" id="successMessage">Tu episodio ya es parte del archivo de la Máquina de ficción de
                     equipoMotor. <br>Puedes ver todos los episodios haciendo clic <button onclick="getEpisodes()"
                         class="button--inline">
@@ -53,7 +53,8 @@
                 <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">→ guardar
                     episodio</button>
             </div>
-            <ul id="episodesList" class="hidden episodesList"></ul>
+            <ul id="episodesList" class="hidden episodesList">
+            </ul>
             <div id="aboutWrapper"></div>
         </article>
     </main>
