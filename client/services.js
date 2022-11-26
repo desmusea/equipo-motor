@@ -1,5 +1,5 @@
 const fetchEpisodes = (action) => {
-  fetch('http://localhost:3000/episodes')
+  fetch('https://equipomotor.onrender.com/episodes')
     .then((response) => response.json())
     .then((data) => action(data));
 };
