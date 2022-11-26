@@ -5,88 +5,61 @@ const episodesList = document.querySelector('#episodesList');
 const title = document.querySelector('#title');
 const episodeWrapper = document.querySelector('#episodeWrapper');
 const saveEpisodeButton = document.querySelector('#saveEpisodeButton');
-const aboutEquipoMotor = document.querySelector('#aboutEquipoMotor');
-const aboutEpisodes = document.querySelector('#aboutEpisodes');
-const aboutCreatingEpisodes = document.querySelector('#aboutCreatingEpisodes');
 const links = document.querySelector('#links');
 const menuItems = document.querySelectorAll('.menu--list__item-button');
+const loader = document.querySelector('#loader');
+const successMessage = document.querySelector('#successMessage');
+const aboutWrapper = document.querySelector('#aboutWrapper');
 
-links.classList.add('hidden');
-
-const aboutNodes = {
-  aboutEquipoMotor,
-  aboutEpisodes,
-  aboutCreatingEpisodes,
-};
 let episodesTitle;
 let finalText;
 let episodeName;
 
-const { start, end, experiences, words } = data;
+const { start, end, experiences, words } = sentences;
+const { equipoMotor, instructions, episodes } = about;
 const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
 
 const hideData = (id) => {
   switch (id) {
-    case '#aboutEquipoMotor':
+    case 'equipoMotor':
       menuItems[0].classList.add('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.remove('selected');
-      links.classList.remove('hidden');
-      aboutEpisodes.classList.add('hidden');
-      aboutCreatingEpisodes.classList.add('hidden');
       break;
-    case '#aboutEpisodes':
+    case 'episodes':
       menuItems[1].classList.add('selected');
       menuItems[0].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.remove('selected');
-
-      aboutCreatingEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      links.classList.add('hidden');
       break;
-    case '#aboutCreatingEpisodes':
+    case 'instructions':
       menuItems[0].classList.remove('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.add('selected');
       menuItems[3].classList.remove('selected');
-
-      aboutEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      links.classList.add('hidden');
-
       break;
     default:
       menuItems[0].classList.remove('selected');
       menuItems[1].classList.remove('selected');
       menuItems[2].classList.remove('selected');
       menuItems[3].classList.add('selected');
-
-      aboutEpisodes.classList.add('hidden');
-      aboutEquipoMotor.classList.add('hidden');
-      aboutCreatingEpisodes.classList.add('hidden');
-      links.classList.add('hidden');
+      aboutWrapper.innerHTML = null;
   }
 };
 
 const displayInfo = (id) => {
+  episodesList.classList.add('hidden');
+  aboutWrapper.innerHTML = about[id];
   hideData(id);
-  document.querySelector(id).classList.contains('hidden')
-    ? document.querySelector(id).classList.remove('hidden')
-    : document.querySelector(id).classList.add('hidden');
 };
 
 const hideInfo = () => {
   menuItems[0].classList.remove('selected');
   menuItems[1].classList.remove('selected');
   menuItems[2].classList.remove('selected');
-
-  aboutEpisodes.classList.add('hidden');
-  aboutEquipoMotor.classList.add('hidden');
-  aboutCreatingEpisodes.classList.add('hidden');
 };
 
 const createEpisode = () => {
@@ -157,7 +130,10 @@ const removeWord = (word) => {
 const selectWord = (word) =>
   selectedWords.includes(word) ? removeWord(word) : selectedWords.push(word);
 
+const unselectWords = () => selectedWords.forEach((word) => removeWord(word));
+
 const addWord = (word) => {
+  successMessage.classList.add('hidden');
   const currentWord = document.getElementById(word);
   currentWord.classList += ' blue';
   if (selectedWords.length < 2) {
@@ -192,27 +168,48 @@ const createWordsNodes = () => {
 const setEpisodeName = (name) => (episodeName = name ? `${name}. ` : '');
 
 const setEpisodes = (episodes) => {
+  successMessage.classList.add('hidden');
+  loader.classList.add('hidden');
+
   if (episodesList.classList.contains('hidden')) {
     hideData();
     episodeWrapper.classList.add('hidden');
     saveEpisodeButton.classList.add('hidden');
     episodesList.classList.remove('hidden');
     episodesList.innerHTML = '';
-    episodes.map((episode) => {
-      episodesList.innerHTML += `<li><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<li></br><br>`;
-    });
+    episodes
+      .slice(0)
+      .reverse()
+      .map((episode) => {
+        episodesList.innerHTML += `<li><span><span class="dot"></span> episodio.TXT #${episode.id} — ${episode.title}</span><br><br> ${episode.text}<li></br><br>`;
+      });
   } else {
     episodesList.classList.add('hidden');
     menuItems[3].classList.remove('selected');
   }
 };
 
-const getEpisodes = () => fetchEpisodes(setEpisodes);
+const getEpisodes = () => {
+  successMessage.classList.add('hidden');
+  loader.textContent = 'Cargando episodios...';
+  loader.classList.remove('hidden');
+  fetchEpisodes(setEpisodes);
+};
 
-const postEpisode = () =>
+const postEpisode = () => {
+  loader.textContent = 'Guardando tu episodio...';
+  loader.classList.remove('hidden');
+  episode.innerHTML = null;
+  saveEpisodeButton.classList.add('hidden');
+  title.innerHTML = null;
+  unselectWords();
   saveEpisode('http://localhost:3000/episodes', {
     text: finalText,
     title: episodesTitle,
+  }).then(() => {
+    loader.classList.add('hidden');
+    successMessage.classList.remove('hidden');
   });
+};
 
 createWordsNodes();

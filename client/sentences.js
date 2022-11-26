@@ -1,4 +1,4 @@
-const data = {
+const sentences = {
   start: [
     'Decido pasear por el Reina Sofía, sin rumbo ni dirección específica.',
     'Accedo al Reina Sofía a través de una pequeña puerta.',

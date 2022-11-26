@@ -3,15 +3,17 @@
   src: url('./fonts/FavoritStd-Regular.woff');
 }
 
+* {
+  font-size: 24px;
+  color: #1e202a;
+}
+
 body {
   font-family: FavoritStd-Regular;
   background-color: #fffff1;
-  font-size: 24px;
   cursor: default;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
-  color: #1e202a;
 }
 
 ::-moz-selection {
@@ -84,9 +86,6 @@ a {
 
 .menu {
   display: flex;
-  position: fixed;
-  top: 10px;
-  z-index: 1;
 }
 
 .menu--list {
@@ -115,33 +114,16 @@ a {
 
 .header {
   padding: 20px 10px;
+  height: 80px;
 }
 
-.about {
-  padding-top: 120px;
-  position: fixed;
-  background-color: #fffff1;
-  width: 100vw;
-  left: 0;
-  top: 0;
-}
-
-.about__text {
-  margin: 10px;
-  margin-bottom: 20px;
-}
-
-.button {
-  font-family: happy-times;
-  font-size: 22px;
-  font-weight: normal;
-  background: transparent;
-  border: 0;
-  border-bottom: 2px solid blue;
-  cursor: pointer;
-  color: blue;
-  font-family: kenoky;
+.button--inline {
+  font-size: 24px;
   padding: 0;
+  font-family: 'FavoritStd-Regular';
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
 }
 
 .links {
@@ -155,27 +137,28 @@ a {
 
 .main {
   display: flex;
-  padding-top: 100px;
   text-align: justify;
-  max-height: 100vh;
+  height: calc(100vh - 150px);
+  margin-top: 20px;
 }
 
 #wordsWrapper {
   display: flex;
   flex-wrap: wrap;
   max-width: 55%;
-  max-height: 600px;
+  padding-bottom: 10px;
+  height: calc(100vh - 150px);
+  align-content: flex-start;
 }
 
 .word {
   padding: 10px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 1.2rem;
   font-family: sans-serif;
   border: 1px solid #1e202a;
   border-radius: 50px;
   margin: 5px;
-  max-height: 32px;
 }
 
 .word:hover,
@@ -190,9 +173,9 @@ a {
 }
 
 .episodesList {
-  height: calc(100vh - 20%);
   overflow: auto;
   padding-right: 20px;
+  height: calc(100vh - 150px);
 }
 
 #episode {
