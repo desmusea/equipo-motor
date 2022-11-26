@@ -260,7 +260,6 @@ a {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .menu,
   .menu--list {
     flex-direction: row;
   }
