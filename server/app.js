@@ -14,7 +14,7 @@ const app = express();
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const saveEpisode = (data) => {
+const saveEpisodes = (data) => {
   const episodesData = JSON.stringify(data);
   fs.writeFileSync('episodes.json', episodesData);
 };
@@ -28,7 +28,7 @@ app.post('/episodes', (req, res) => {
   const existsEpisodes = getEpisodesData();
 
   const newEpisodeData = req.body;
-  const id = existsEpisodes.length;
+  const id = existsEpisodes[existsEpisodes.length - 1].id + 1;
   const newEpisode = { id, ...newEpisodeData };
 
   if (!newEpisode.text) {
@@ -40,9 +40,14 @@ app.post('/episodes', (req, res) => {
     });
   }
 
+  const maxEpisodesToSave = 500;
+  if (existsEpisodes.length === maxEpisodesToSave) {
+    existsEpisodes.shift();
+  }
+
   existsEpisodes.push(newEpisode);
 
-  saveEpisode(existsEpisodes);
+  saveEpisodes(existsEpisodes);
   res.send({ success: true, msg: 'New episode added successfully 💅🏾' });
 });
 
