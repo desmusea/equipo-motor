@@ -60,7 +60,7 @@ const about = {
   Sofía.`,
   instructions: `1. Selecciona tres palabras del listado.
   <br>
-  2. Haz clic en el botón '→ Guardar episodio'
+  2. Haz clic en el botón '→ guardar episodio'
   <br>
   3. ¡Listo!`,
 };
