@@ -14,6 +14,7 @@ const aboutWrapper = document.querySelector('#aboutWrapper');
 let episodesTitle;
 let finalText;
 let episodeName;
+let displayedInfoId;
 
 const { start, end, experiences, words } = sentences;
 const { equipoMotor, instructions, episodes } = about;
@@ -21,11 +22,9 @@ const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
 
-const scrollTo = (hash) => {
-  location.hash = '#' + hash;
-};
+const scrollTo = (hash) => (location.hash = '#' + hash);
 
-const hideData = (id) => {
+const toggleMenuItemsStatus = (id) => {
   switch (id) {
     case 'equipoMotor':
       menuItems[0].classList.add('selected');
@@ -55,18 +54,21 @@ const hideData = (id) => {
 };
 
 const displayInfo = (id) => {
+  unselectWords();
   episodesList.classList.add('hidden');
   episodeWrapper.classList.add('hidden');
-  if (aboutWrapper.innerHTML === '') {
-    aboutWrapper.innerHTML = about[id];
-    hideData(id);
-  } else {
+  if (displayedInfoId === id) {
     aboutWrapper.innerHTML = '';
-    hideInfo();
+    unselectMenuItems();
+    displayedInfoId = '';
+  } else {
+    aboutWrapper.innerHTML = about[id];
+    toggleMenuItemsStatus(id);
+    displayedInfoId = id;
   }
 };
 
-const hideInfo = () => {
+const unselectMenuItems = () => {
   menuItems[0].classList.remove('selected');
   menuItems[1].classList.remove('selected');
   menuItems[2].classList.remove('selected');
@@ -130,7 +132,7 @@ const addLink = (sentence, url, key) => {
   return `${sentenceWithLink}`;
 };
 
-const resetText = () => {
+const resetEpisode = () => {
   finalText = '';
   title.innerHTML = '';
 };
@@ -147,6 +149,8 @@ const selectWord = (word) =>
 const unselectWords = () => selectedWords.forEach((word) => removeWord(word));
 
 const addWord = (word) => {
+  aboutWrapper.innerHTML = '';
+  unselectMenuItems();
   successMessage.classList.add('hidden');
   const currentWord = document.getElementById(word);
   currentWord.classList += ' blue';
@@ -160,7 +164,7 @@ const addWord = (word) => {
   } else if (selectedWords.length === 3) {
     const selectedNodes = document.querySelectorAll('.blue');
     selectedNodes.forEach((node) => node.classList.remove('blue'));
-    resetText();
+    resetEpisode();
     selectedWords = [];
     selectedWords.push(word);
     currentWord.classList += ' blue';
@@ -186,7 +190,7 @@ const setEpisodes = (episodes) => {
   loader.classList.add('hidden');
 
   if (episodesList.classList.contains('hidden')) {
-    hideData();
+    toggleMenuItemsStatus();
     episodeWrapper.classList.add('hidden');
     saveEpisodeButton.classList.add('hidden');
     episodesList.classList.remove('hidden');
