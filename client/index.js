@@ -226,6 +226,11 @@ const setEpisodes = (episodes) => {
 };
 
 const getEpisodes = () => {
+  if (selectedWords.length > 0) {
+    unselectWords();
+    resetEpisode();
+  }
+
   successMessage.classList.add('hidden');
   loader.textContent = 'Cargando episodios...';
   loader.classList.remove('hidden');
