@@ -135,7 +135,9 @@ const addLink = (sentence, url, key) => {
 };
 
 const resetEpisode = () => {
+  saveEpisodeButton.classList.add('hidden');
   finalText = '';
+  episode.innerHTML = '';
   title.innerHTML = '';
 };
 
