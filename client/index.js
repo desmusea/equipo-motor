@@ -53,8 +53,13 @@ const hideData = (id) => {
 const displayInfo = (id) => {
   episodesList.classList.add('hidden');
   episodeWrapper.classList.add('hidden');
-  aboutWrapper.innerHTML = about[id];
-  hideData(id);
+  if (aboutWrapper.innerHTML === '') {
+    aboutWrapper.innerHTML = about[id];
+    hideData(id);
+  } else {
+    aboutWrapper.innerHTML = '';
+    hideInfo();
+  }
 };
 
 const hideInfo = () => {
