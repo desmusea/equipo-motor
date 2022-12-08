@@ -6,10 +6,10 @@
 * {
   font-size: 24px;
   color: #1e202a;
+  font-family: FavoritStd-Regular;
 }
 
 body {
-  font-family: FavoritStd-Regular;
   background-color: #fffff1;
   cursor: default;
   height: 100%;
@@ -175,7 +175,6 @@ a {
 .episodesList {
   overflow: auto;
   padding-right: 20px;
-  height: calc(100vh - 150px);
 }
 
 #episode {
@@ -223,11 +222,13 @@ a {
   .menu--list__item {
     margin: 0;
     height: 100%;
+    padding-right: 10px;
     margin-bottom: 10px;
   }
   .main {
     flex-direction: column-reverse;
     height: 100%;
+    margin: 10px;
   }
 
   .about {
@@ -241,7 +242,6 @@ a {
 
   .rightSide {
     width: 100%;
-    margin-left: 0;
     margin: 10px;
   }
 
