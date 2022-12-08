@@ -74,11 +74,22 @@ const unselectMenuItems = () => {
   menuItems[2].classList.remove('selected');
 };
 
+const sortSentencesRandomly = (sentences) => {
+  let randomlySortedSentence = '';
+  let currentSentences = [...sentences];
+  sentences.forEach(() => {
+    const randomNumber = getRandomInt(currentSentences.length);
+    const sentence = currentSentences[randomNumber];
+    currentSentences = currentSentences.filter((item) => item !== sentence);
+    randomlySortedSentence = randomeSentence + ` ${sentence}`;
+  });
+  return randomlySortedSentence;
+};
+
 const createEpisode = () => {
   episodesList.classList.add('hidden');
   episodeWrapper.classList.remove('hidden');
   saveEpisodeButton.classList.remove('hidden');
-
   const randomeStartIdx = getRandomInt(start.length);
   const randomStart = start[randomeStartIdx];
   const randomeEndIdx = getRandomInt(end.length);
@@ -110,7 +121,10 @@ const createEpisode = () => {
   );
 
   const episodeNameNode = `<span class="episodeName"> ${episodeName} — <span>`;
-  finalText = ` ${randomStart} ${randomExp} ${sentence1} ${sentence2} ${sentence3} ${randomEnd}`;
+  const innerSentences = [randomExp, sentence1, sentence2, sentence3];
+  const randomlySortedSentences = sortSentencesRandomly(innerSentences);
+
+  finalText = ` ${randomStart} ${randomlySortedSentences} ${randomEnd}`;
   episodesTitle = getTitle();
   episode.innerHTML = finalText;
   title.innerHTML = `<span class="dot"></span> episodio.TXT — ${episodesTitle} `;
