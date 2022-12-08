@@ -52,9 +52,16 @@ const hideData = (id) => {
 
 const displayInfo = (id) => {
   episodesList.classList.add('hidden');
-  aboutWrapper.innerHTML = about[id];
-  hideData(id);
+  episodeWrapper.classList.add('hidden');
+  if (aboutWrapper.innerHTML === '') {
+    aboutWrapper.innerHTML = about[id];
+    hideData(id);
+  } else {
+    aboutWrapper.innerHTML = '';
+    hideInfo();
+  }
 };
+
 
 const hideInfo = () => {
   menuItems[0].classList.remove('selected');
