@@ -118,7 +118,9 @@ const createEpisode = () => {
   if (episodeName) {
     title.innerHTML += episodeNameNode;
   }
-  const isMobile = navigator.userAgentData.mobile;
+
+  const width = wordsWrapper.clientWidth;
+  const isMobile = width <= 768;
   if (isMobile) {
     scrollTo('episodeWrapper');
   }
