@@ -222,6 +222,7 @@ a {
   .menu--list__item {
     margin: 0;
     height: 100%;
+    padding-right: 10px;
     margin-bottom: 10px;
   }
   .main {
