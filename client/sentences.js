@@ -3,11 +3,13 @@ const sentences = {
     'Decido pasear por el Reina Sofía, sin rumbo ni dirección específica.',
     'Accedo al Reina Sofía a través de una pequeña puerta.',
     'El cielo está despejado al otro lado de las ventanas del Reina Sofía.',
+    'Me he comprado un nuevo videojuego en el que paseas virtualmente por el Reina Sofía.',
     'He estado haciendo cola para el horario gratuito del Reina Sofía, y ya estoy dentro.',
     'Me cuelo entre la multitud que accede al Reina Sofía.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección.',
     'Salto sobre un trampolín, y acabo en el interior del Reina Sofía.',
+    'Tras leer un polémico hilo de Twitter, he decidido acercarme al Reina Sofía a ver si es tan interesante como dicen.',
     'He leído en la prensa que el Reina Sofía organizó su colección en ocho episodios, así que me acerco a mirar.',
     'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
@@ -217,6 +219,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/negocios-turisticos-objetivos-typical-cala-gogo',
         key: 'fotografiada',
       },
+      {
+        sentence:
+          'En un paisaje de Esteban Francés, el cielo permanece detenido, generando un clima impropio en el mundo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/arrangez-vous',
+        key: 'un paisaje',
+      },
     ],
     PODER: [
       {
@@ -228,6 +236,12 @@ const sentences = {
       {
         sentence:
           'Me planto frente a un póster de María María Acha-Kutscher, que me resulta empoderante.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/toma-calle-2011-madrid',
+        key: 'póster',
+      },
+      {
+        sentence:
+          'En la penumbra, el edificio Flatiron de Nueva York se eleva imponente.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/toma-calle-2011-madrid',
         key: 'póster',
       },
@@ -434,9 +448,15 @@ const sentences = {
       },
       {
         sentence:
-          'Me pregunto de qué estarán hablando los personajes de La Tertulia de Ángeles Santos',
+          'Me pregunto de qué estarán hablando los personajes de La Tertulia de Ángeles Santos.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/tertulia',
         key: 'La Tertulia',
+      },
+      {
+        sentence:
+          'Me río con el título de esta fotografía: Atardecer en La Escala; ha llegado la hora del refresco lento y la conversación. Me dan ganas de ponerme a charlar con una limonada.',
+        url: 'https://ladigitaldelreina.museoreinasofia.es/search/item/50527-atardecer-en-la-escala-ha-llegado-la-hora-del-refresco-lento-y-la-conversacion?offset=1',
+        key: 'Atardecer en La Escala; ha llegado la hora del refresco lento y la conversación',
       },
     ],
     CIUDAD: [
@@ -476,7 +496,7 @@ const sentences = {
         sentence:
           'Las ansiedades cotidianas del trabajo me asfixian. Ese lienzo del fondo me ordena: "¡Pare ahora!". Es de Pietrina Checcacci',
         url: 'https://www.museoreinasofia.es/coleccion/obra/pare-agora-pare-ahora-0',
-        key: '¡Pare ahora!',
+        key: 'Pare ahora',
       },
     ],
     INOCENCIA: [
@@ -571,6 +591,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/imaginacion-radical-carnavales-resistencia',
         key: 'Un vídeo',
       },
+      {
+        sentence:
+          'Me quedo mirando fijamente los maniquíes representados en una pintura de José Solana; casi pareciera que van a tomar vida.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/vitrinas',
+        key: 'una pintura',
+      },
     ],
     AMOR: [
       {
@@ -659,6 +685,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/m3x3',
         key: 'vídeo',
       },
+      {
+        sentence:
+          'Encuentro un atrayente ritmo en unas figuras cónicas que forman una curva en el espacio.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sieves-tamices',
+        key: 'figuras cónicas',
+      },
     ],
     SUCIEDAD: [
       {
@@ -672,6 +704,12 @@ const sentences = {
           'Una obra de Manolo Millares, que desde lejos me parece sucia y manchada, de cerca me transmite una sensibilidad especial.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/cuadro',
         key: 'Una obra',
+      },
+      {
+        sentence:
+          'Entre la suciedad de un vertedero, un grupo de hombres y mujeres, niñas y niños, rebuscan ante la mirada del fotógrafo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/rebusca-vertederos-basura-tetuan-victorias',
+        key: 'la mirada del fotógrafo',
       },
     ],
     BANDERA: [
@@ -767,6 +805,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/formas-juegos-infantiles-iii',
         key: 'una escultura de madera',
       },
+      {
+        sentence:
+          'Me quedo mirando durante cinco minutos una obra de Eusebio Sempere y trato de reproducir de memoria sus símbolos en un papel.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sin-titulo-composicion',
+        key: 'obra',
+      },
     ],
     VIOLENCIA: [
       {
@@ -781,6 +825,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/carcel',
         key: 'un dibujo',
       },
+      {
+        sentence:
+          'Ante la violencia aérea de la Guerra Civil, una mujer levanta con rabia su puño a un cielo cenizo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/madrid-1937-aviones-negros',
+        key: 'una mujer',
+      },
     ],
     BARCO: [
       {
@@ -788,6 +838,18 @@ const sentences = {
           'Agito levemente la cabeza mientras miro el pequeño barco en una obra de Feliciano Cinturón, como queriendo hacer que se balancee.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/inmensamente-azul',
         key: 'obra',
+      },
+      {
+        sentence:
+          'Una medalla de bronce muestra el hundimiento de un barco en el océano.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/sinking-hospital-and-civilian-refugee-ships-hundimiento-barco-hospital-refugiados',
+        key: 'medalla de bronce',
+      },
+      {
+        sentence:
+          'Un grupo de personas contemplan con cansancio el océano desde la barandilla de un barco.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/como-llegue-mexico',
+        key: 'grupo de personas',
       },
     ],
     TELEVISIÓN: [
@@ -803,6 +865,32 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/pm-magazine',
         key: 'una instalación',
       },
+      {
+        sentence:
+          'En la televisión de una sala se reproduce una curiosa película de divertido nombre: Lúzirlúzir.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/luzirluzir',
+        key: 'la televisión',
+      },
+    ],
+    COTIDIANIDAD: [
+      {
+        sentence:
+          'Una colorida familia representada por Luis Gordillo me transmite algo de cotidiano, y a la vez, una emoción perturbadora.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/familia-0',
+        key: 'familia representada',
+      },
+      {
+        sentence:
+          'Una mujer se recoge el pelo en una larga coleta, y pienso en mi hermana peinándose esta misma mañana.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/femme-violet-mujer-violeta',
+        key: 'Una mujer',
+      },
+      {
+        sentence:
+          'Sonrío ante una fotografía de un gran grupo de niños y niñas jugando con una pelota en un callejón.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/children-playing-baseball-ninos-jugando-al-beisbol',
+        key: 'una fotografía',
+      },
     ],
     VOZ: [
       {
@@ -810,6 +898,18 @@ const sentences = {
           'Me resulta emocionante escuchar la voz de Pedro Lemebel saliendo de un altavoz en la sala.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/manifiesto-hablo-mi-diferencia-0',
         key: 'la voz',
+      },
+      {
+        sentence:
+          'Creo que, si las pinturas tuvieran voz, este retrato lanzaría un grito agudo y alarmado.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/cabeza-mujer-llorando-panuelo-i-postscripto-guernica',
+        key: 'este retrato',
+      },
+      {
+        sentence:
+          'Puedo escuchar la voz cantarina de la escultura de una niña, riendo ante algo que sólo puedo imaginar.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/bambina-che-ride-nina-que-rie',
+        key: 'escultura de una niña',
       },
     ],
     VIAJE: [
@@ -859,6 +959,18 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/road-barcelona-french-border-carretera-desde-barcelona-hasta-frontera-francia',
         key: 'una fotografía',
       },
+      {
+        sentence:
+          'Una mesa de acero parece delimitar una silenciosa frontera entre la tierra y el suelo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/mesa-omar-khayyam-ii',
+        key: 'Una mesa de acero',
+      },
+      {
+        sentence:
+          'En el centro de un lienzo, una línea horizontal forma una frontera sobre el fondo amarillo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/untitled-orange-plum-yellow-sin-titulo-naranja-ciruela-amarillo',
+        key: 'centro de un lienzo',
+      },
     ],
     DOLOR: [
       {
@@ -886,6 +998,38 @@ const sentences = {
           'Paso junto a una extraña obra en la que las figuras parecen en permanente transformación de colores.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/morfologia-psicologica',
         key: 'extraña obra',
+      },
+      {
+        sentence:
+          'Las Celdas de Clemente Padín me marean un poco. Parece que van a transformarse y convertirse en un videojuego.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/celda-1',
+        key: 'Celdas',
+      },
+      {
+        sentence:
+          'Las sombras de una escultura tiemblan ligeramente contra la pared, transformando el espacio a su alrededor.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/proyecto-lausanne-maqueta',
+        key: 'una escultura',
+      },
+    ],
+    MUSEO: [
+      {
+        sentence:
+          'Miro con curiosidad una fotografía de Ribalta en la que representa el interior de un museo de arte.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/imperio-o-kd-35',
+        key: 'una fotografía',
+      },
+      {
+        sentence:
+          'Desde el interior de una vitrina de museo, una foquita me devuelve la mirada.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/museo-historia-natural-londres',
+        key: 'interior de una vitrina',
+      },
+      {
+        sentence:
+          'Me siento en uno de los bancos del museo y sigo con la mirada la separación entre las piedras de sus muros.',
+        url: 'https://www.museoreinasofia.es/museo/historia',
+        key: 'interior de una vitrina',
       },
     ],
   },
