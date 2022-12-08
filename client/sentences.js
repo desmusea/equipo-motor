@@ -763,6 +763,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vinedo-pajaros',
         key: 'Viñedo y Pájaros',
       },
+      {
+        sentence:
+          'Me quedo mirando una escultura de madera, que me trae a la memoria el parque infantil donde jugaba hace ya muchos años.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/formas-juegos-infantiles-iii',
+        key: 'una escultura de madera',
+      },
     ],
     VIOLENCIA: [
       {
@@ -770,6 +776,12 @@ const sentences = {
           'Sigo con la mirada las letras negras del cartel VIOLENCIA de Juan Carlos Romero.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/violencia',
         key: 'VIOLENCIA',
+      },
+      {
+        sentence:
+          'Pese a los vibrantes colores, percibo una violencia escondida en un dibujo de Aurelio Sánchez.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/carcel',
+        key: 'un dibujo',
       },
     ],
     BARCO: [
@@ -815,6 +827,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/boite-verte-mariee-mise-nu-par-ses-celibataires-meme-caja-verde-novia-desnudada-sus',
         key: 'caja verde',
       },
+      {
+        sentence:
+          'Veo unas fotografías en blanco y negro de personas en el metro… no parecen estar disfrutando mucho del viaje.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/untitled-subway-passengers-new-york-sin-titulo-pasajeros-suburbano-nueva-york-1',
+        key: 'unas fotografías',
+      },
     ],
     SUEÑO: [
       {
@@ -829,6 +847,20 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/acarino-galaico-barro',
         key: 'Acariño Galaico',
       },
+      {
+        sentence:
+          'Avanzando por el museo, me cruzo con una curiosa pintura cuyos colores y formas parecen sacadas de un sueño infantil.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/primer-consejo',
+        key: 'curiosa pintura',
+      },
+    ],
+    FRONTERA: [
+      {
+        sentence:
+          'En una fotografía, una fila de personas entristecidas avanza por un camino, quizás hacia una frontera.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/road-barcelona-french-border-carretera-desde-barcelona-hasta-frontera-francia',
+        key: 'una fotografía',
+      },
     ],
     DOLOR: [
       {
@@ -842,6 +874,12 @@ const sentences = {
           'Veo una fotografía de una mujer tirada en una escalera. Me pregunto si se habrá caído y hecho daño…',
         url: 'https://www.museoreinasofia.es/coleccion/obra/syntagma',
         key: 'una fotografía',
+      },
+      {
+        sentence:
+          'Al otro lado de una verja pintada, un grupo de personas me devuelve la mirada con miradas contraídas por el dolor.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/espoir-esperanza',
+        key: 'una verja pintada',
       },
     ],
     TRANSFORMACIÓN: [
