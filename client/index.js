@@ -81,7 +81,7 @@ const sortSentencesRandomly = (sentences) => {
     const randomNumber = getRandomInt(currentSentences.length);
     const sentence = currentSentences[randomNumber];
     currentSentences = currentSentences.filter((item) => item !== sentence);
-    randomlySortedSentence = randomlySortedSentence + ` ${sentence}`;
+    randomlySortedSentence = `${randomlySortedSentence} ${sentence}`;
   });
   return randomlySortedSentence;
 };
