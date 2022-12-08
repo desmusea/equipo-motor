@@ -229,7 +229,6 @@ a {
   .main {
     flex-direction: column-reverse;
     height: 100%;
-    margin: 10px;
   }
 
   .about {
