@@ -7,7 +7,7 @@ const about = {
     Vinagre, Sara Martín Terceño, Fran MM Cabeza de Vaca y Laura Ramírez Ashbaugh.
     <br /> <br />
     equipoMotor.TXT convocó a las personas que formaron parte de algunas de las Comunidades del Museo Reina
-    Sofía entre los años 2019 y 2022 para recorrer <a href="https://www.museoreinasofia.es/coleccion" target="_blank" ><i> Vasos Comunicantes</i></a>, la reordenación de la
+    Sofía entre los años 2019 y 2022 para recorrer <a href="https://www.museoreinasofia.es/coleccion" target="_blank">Vasos Comunicantes</a>, la reordenación de la
     Colección
     Permanente del museo que se presentó en noviembre de 2021.
     <br />
@@ -24,8 +24,7 @@ const about = {
     <br>
     <br>
     El glosario se presenta aquí como detonante para activar el mecanismo de esta máquina de ficción de
-    <i>Vasos
-        Comunicantes</i>, que
+    <a href="https://www.museoreinasofia.es/coleccion" target="_blank" > Vasos Comunicantes</a>, que
     genera
     un Episodio en torno al museo conectando obras, conceptos y experiencias reales y ficcionadas extraídas
     de
@@ -46,14 +45,14 @@ const about = {
         <a href="https://go.museoreinasofia.es/equipomotor-boletin8" target="_blank" class="links__item">#8</a>
         <a href="https://go.museoreinasofia.es/equipomotor-boletin9" target="_blank" class="links__item">#9</a>
     </span>`,
-  episodes: `La exposición <i>Vasos Comunicantes</i> está compuesta de ocho Episodios. Cada uno de ellos presenta una
+  episodes: `La exposición <a href="https://www.museoreinasofia.es/coleccion" target="_blank" >Vasos Comunicantes</a> está compuesta de ocho Episodios. Cada uno de ellos presenta una
   historia, un relato
   posible entre todos los relatos a narrar a través del arte producido desde el año 1881 hasta
   nuestros días.
   <br><br>
   Esta máquina funciona como herramienta de continuidad de este ejercicio de narrar. A través de su
   mecanismo,
-  cualquiera puede participar de la narrativa de <i>Vasos Comunicantes</i>, añadiendo un Episodio propio
+  cualquiera puede participar de la narrativa de <a href="https://www.museoreinasofia.es/coleccion" target="_blank" >Vasos Comunicantes</a>, añadiendo un Episodio propio
   que
   lo
   enriquezca
