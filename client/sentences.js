@@ -432,14 +432,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/tertulia-cafe-pombo',
         key: 'La Tertulia del Café de Pombo',
       },
-      [
-        {
-          sentence:
-            'Me pregunto de qué estarán hablando los personajes de La Tertulia de Ángeles Santos',
-          url: 'https://www.museoreinasofia.es/coleccion/obra/tertulia',
-          key: 'La Tertulia',
-        },
-      ],
+      {
+        sentence:
+          'Me pregunto de qué estarán hablando los personajes de La Tertulia de Ángeles Santos',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/tertulia',
+        key: 'La Tertulia',
+      },
     ],
     CIUDAD: [
       {
