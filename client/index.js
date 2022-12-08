@@ -62,7 +62,6 @@ const displayInfo = (id) => {
   }
 };
 
-
 const hideInfo = () => {
   menuItems[0].classList.remove('selected');
   menuItems[1].classList.remove('selected');

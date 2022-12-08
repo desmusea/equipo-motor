@@ -7,6 +7,7 @@ const sentences = {
     'Me cuelo entre la multitud que accede al Reina Sofía.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección.',
+    'Salto sobre un trampolín, y acabo en el interior del Reina Sofía.',
     'He leído en la prensa que el Reina Sofía organizó su colección en ocho episodios, así que me acerco a mirar.',
     'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
@@ -209,6 +210,12 @@ const sentences = {
           'Observo con curiosidad la maqueta del pabellón climatizado de la Expo del 92, y casi puedo sentir el frío.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/maqueta-palenque',
         key: 'maqueta del pabellón climatizado',
+      },
+      {
+        sentence:
+          'Parece que hace un clima estupendo en una playa fotografiada por Xavier Miserachs.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/negocios-turisticos-objetivos-typical-cala-gogo',
+        key: 'fotografiada',
       },
     ],
     PODER: [
@@ -560,11 +567,17 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/mundo',
         key: 'Un mundo',
       },
+      {
+        sentence:
+          'Un vídeo de Marcelo Expósito muestra una calle rebosante de vida.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/imaginacion-radical-carnavales-resistencia',
+        key: 'Un vídeo',
+      },
     ],
     AMOR: [
       {
         sentence:
-          'Contemplo con ternura (y algo de vergüenza) la mirada amorosa que se intercambian Adán y Eva en la pintura de Rosario de Velasco.',
+          'Contemplo con ternura (y también algo de vergüenza) la mirada amorosa que se intercambian Adán y Eva en la pintura de Rosario de Velasco.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/adan-eva-0',
         key: 'Adán y Eva',
       },
@@ -572,6 +585,12 @@ const sentences = {
         sentence:
           'Me pregunto si los dos personajes que aparecen en una pintura de Luis Castellanos serán amigos o amantes.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/atletas',
+        key: 'una pintura',
+      },
+      {
+        sentence:
+          'Una gran letra A me hace pensar… ¿qué palabras empiezan por A? La primera que se me viene a la cabeza: amor.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/letra',
         key: 'una pintura',
       },
     ],
@@ -584,7 +603,7 @@ const sentences = {
       },
       {
         sentence:
-          'Paso junto a una pintura de Miró que estuvo expuesta en la Trienal de Milán de 1988.',
+          'Paso junto a una pintura de Miró que, por lo que leo en la cartela, estuvo expuesta en la Trienal de Milán de 1988.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/personnages-et-oiseaux-devant-soleil-personajes-pajaros-delante-sol',
         key: 'pintura',
       },
@@ -600,7 +619,7 @@ const sentences = {
         sentence:
           'Mis ojos siguen en vertical el camino que conforma la escultura blanca de Alberto, hasta la estrella de la cúspide.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/pueblo-espanol-tiene-camino-que-conduce-estrella-maqueta',
-        key: 'la blanca escultura',
+        key: 'la escultura blanca',
       },
       {
         sentence:
@@ -649,6 +668,12 @@ const sentences = {
           'En una fotografía, sonríe una voluntaria tras limpiar la suciedad de los vertidos de chapapote en el mar.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/volunteer-watching-volunteer-smiling-isla-ons-191202-voluntaria-observando-voluntaria',
         key: 'una fotografía',
+      },
+      {
+        sentence:
+          'Una obra de Manolo Millares, que desde lejos me parece sucia y manchada, de cerca me transmite una sensibilidad especial.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/cuadro',
+        key: 'Una obra',
       },
     ],
     BANDERA: [
@@ -724,6 +749,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/figuras-1',
         key: 'Las dos Fridas',
       },
+      {
+        sentence:
+          'En una obra de Equipo Zaj, aparecen tres amigos que producen una sombra sobre el suelo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/excavacion-zaj-i',
+        key: 'una obra',
+      },
     ],
     MEMORIA: [
       {
@@ -732,6 +763,12 @@ const sentences = {
         url: 'https://www.museoreinasofia.es/coleccion/obra/vinedo-pajaros',
         key: 'Viñedo y Pájaros',
       },
+      {
+        sentence:
+          'Me quedo mirando una escultura de madera, que me trae a la memoria el parque infantil donde jugaba hace ya muchos años.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/formas-juegos-infantiles-iii',
+        key: 'una escultura de madera',
+      },
     ],
     VIOLENCIA: [
       {
@@ -739,6 +776,12 @@ const sentences = {
           'Sigo con la mirada las letras negras del cartel VIOLENCIA de Juan Carlos Romero.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/violencia',
         key: 'VIOLENCIA',
+      },
+      {
+        sentence:
+          'Pese a los vibrantes colores, percibo una violencia escondida en un dibujo de Aurelio Sánchez.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/carcel',
+        key: 'un dibujo',
       },
     ],
     BARCO: [
@@ -761,6 +804,90 @@ const sentences = {
           'Me detengo durante cinco minutos a observar lo que sucede en los televisores de una instalación.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/pm-magazine',
         key: 'una instalación',
+      },
+    ],
+    VOZ: [
+      {
+        sentence:
+          'Me resulta emocionante escuchar la voz de Pedro Lemebel saliendo de un altavoz en la sala.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/manifiesto-hablo-mi-diferencia-0',
+        key: 'la voz',
+      },
+    ],
+    VIAJE: [
+      {
+        sentence:
+          'Una pintura de Miró me recuerda a un viaje que hice hace años, donde me alojé en una casa en el campo.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/casa-palmera',
+        key: 'pintura',
+      },
+      {
+        sentence:
+          'Veo una caja verde llena de papeles y objetos, como una maletita-museo que alguien se fuera a llevar de viaje.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/boite-verte-mariee-mise-nu-par-ses-celibataires-meme-caja-verde-novia-desnudada-sus',
+        key: 'caja verde',
+      },
+      {
+        sentence:
+          'Veo unas fotografías en blanco y negro de personas en el metro… no parecen estar disfrutando mucho del viaje.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/untitled-subway-passengers-new-york-sin-titulo-pasajeros-suburbano-nueva-york-1',
+        key: 'unas fotografías',
+      },
+    ],
+    SUEÑO: [
+      {
+        sentence:
+          'El hombre representado en una pintura de Alfonso Ponce de León parece dormido, puede que soñando bajo la luna.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/descanso',
+        key: 'pintura',
+      },
+      {
+        sentence:
+          'Veo un largo rato la película Acariño Galaico, de Val del Omar, cuyas imágenes parecen salir de una delicada ensoñación.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/acarino-galaico-barro',
+        key: 'Acariño Galaico',
+      },
+      {
+        sentence:
+          'Avanzando por el museo, me cruzo con una curiosa pintura cuyos colores y formas parecen sacadas de un sueño infantil.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/primer-consejo',
+        key: 'curiosa pintura',
+      },
+    ],
+    FRONTERA: [
+      {
+        sentence:
+          'En una fotografía, una fila de personas entristecidas avanza por un camino, quizás hacia una frontera.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/road-barcelona-french-border-carretera-desde-barcelona-hasta-frontera-francia',
+        key: 'una fotografía',
+      },
+    ],
+    DOLOR: [
+      {
+        sentence:
+          'Me impacta una pintura de Maruja Mallo, que presenta una tierra arrasada por el dolor y la oscuridad.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/tierra-excrementos',
+        key: 'una pintura',
+      },
+      {
+        sentence:
+          'Veo una fotografía de una mujer tirada en una escalera. Me pregunto si se habrá caído y le habrá dolido el golpe…',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/syntagma',
+        key: 'una fotografía',
+      },
+      {
+        sentence:
+          'Al otro lado de una verja pintada, un grupo de personas me devuelve la mirada con miradas contraídas por el dolor.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/espoir-esperanza',
+        key: 'una verja pintada',
+      },
+    ],
+    TRANSFORMACIÓN: [
+      {
+        sentence:
+          'Paso junto a una extraña obra en la que las figuras parecen en permanente transformación de colores.',
+        url: 'https://www.museoreinasofia.es/coleccion/obra/morfologia-psicologica',
+        key: 'extraña obra',
       },
     ],
   },
