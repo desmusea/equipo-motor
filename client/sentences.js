@@ -871,7 +871,7 @@ const sentences = {
       },
       {
         sentence:
-          'Veo una fotografía de una mujer tirada en una escalera. Me pregunto si se habrá caído y hecho daño…',
+          'Veo una fotografía de una mujer tirada en una escalera. Me pregunto si se habrá caído y le habrá dolido el golpe…',
         url: 'https://www.museoreinasofia.es/coleccion/obra/syntagma',
         key: 'una fotografía',
       },
