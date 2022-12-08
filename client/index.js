@@ -21,6 +21,10 @@ const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
 
+const scrollTo = (hash) => {
+  location.hash = '#' + hash;
+};
+
 const hideData = (id) => {
   switch (id) {
     case 'equipoMotor':
@@ -111,6 +115,10 @@ const createEpisode = () => {
 
   if (episodeName) {
     title.innerHTML += episodeNameNode;
+  }
+  const isMobile = navigator.userAgentData.mobile;
+  if (isMobile) {
+    scrollTo('episodeWrapper');
   }
 };
 
