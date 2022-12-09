@@ -1,12 +1,7 @@
 const about = {
   equipoMotor: `La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor target="_blank"">equipoMotor</a>,
-    equipoMotor.TXT, tuvo
-    lugar entre
-    marzo y junio del año 2022, coordinada por Desmusea y acompañada por Torta Colectivo, Yuri Tuma y
-    Fabiana
-    Vinagre, Sara Martín Terceño, Fran MM Cabeza de Vaca y Laura Ramírez Ashbaugh.
-    <br /> <br />
-    equipoMotor.TXT convocó a las personas que formaron parte de algunas de las Comunidades del Museo Reina
+    equipoMotor.TXT
+    convocó a las personas que formaron parte de algunas de las Comunidades del Museo Reina
     Sofía entre los años 2019 y 2022 para recorrer <a href="https://www.museoreinasofia.es/coleccion" target="_blank">Vasos Comunicantes</a>, la reordenación de la
     Colección
     Permanente del museo que se presentó en noviembre de 2021.
@@ -31,6 +26,12 @@ const about = {
     equipoMotor.TXT.
     <br />
     <br />
+    
+    Coordinado por Desmusea entre marzo y junio del año 2022 y acompañada por Torta Colectivo, Yuri Tuma y
+    Fabiana
+    Vinagre, Sara Martín Terceño, Fran MM Cabeza de Vaca y Laura Ramírez Ashbaugh.
+    <br />
+    <br />
     Puedes visitar los boletines equipoMotor.TXT que funcionan como bitácora y relatoría de las sesiones
     aquí:
     <span id="links" class="links">
@@ -45,7 +46,7 @@ const about = {
         <a href="https://go.museoreinasofia.es/equipomotor-boletin8" target="_blank" class="links__item">#8</a>
         <a href="https://go.museoreinasofia.es/equipomotor-boletin9" target="_blank" class="links__item">#9</a>
     </span>`,
-  episodes: `La exposición <a href="https://www.museoreinasofia.es/coleccion" target="_blank" >Vasos Comunicantes</a> está compuesta de ocho Episodios. Cada uno de ellos presenta una
+  episodes: `Este proyecto nace en el contexto de la exposición <a href="https://www.museoreinasofia.es/coleccion" target="_blank" >Vasos Comunicantes</a>, en el Museo Reina Sofía, que está compuesta de ocho Episodios. Cada uno de ellos presenta una
   historia, un relato
   posible entre todos los relatos a narrar a través del arte producido desde el año 1881 hasta
   nuestros días.
@@ -58,9 +59,9 @@ const about = {
   enriquezca
   y aporte nuevos matices, creando una nueva posibilidad de entender y hacer propia la historia del Reina
   Sofía.`,
-  instructions: `1. Selecciona tres palabras del listado.
+  instructions: `1. Haz clic en tres palabras del listado. Se creará un episodio de forma automática.
   <br>
   2. Haz clic en el botón '→ guardar episodio'
   <br>
-  3. ¡Listo!`,
+  3. ¡Listo! Tu episodio formará parte del archivo de esta máquina de ficción`,
 };
