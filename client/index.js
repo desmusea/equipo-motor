@@ -10,6 +10,7 @@ const menuItems = document.querySelectorAll('.menu--list__item-button');
 const loader = document.querySelector('#loader');
 const successMessage = document.querySelector('#successMessage');
 const aboutWrapper = document.querySelector('#aboutWrapper');
+const popUp = document.querySelector('#popup');
 
 let episodesTitle;
 let finalText;
@@ -23,6 +24,7 @@ const wordsAvailable = Object.keys(words);
 let selectedWords = [];
 
 const scrollTo = (hash) => (location.hash = '#' + hash);
+const closePopup = () => popUp.classList.add('hidden');
 
 const toggleMenuItemsStatus = (id) => {
   switch (id) {

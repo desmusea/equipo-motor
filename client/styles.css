@@ -15,11 +15,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0 20px;
+  overflow-x: hidden;
 }
 
 button {
   border: 0;
   background: transparent;
+  cursor: pointer;
 }
 
 ::-moz-selection {
@@ -70,6 +72,25 @@ ul {
 
 a {
   color: blue;
+}
+
+.popup-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  position: absolute;
+  background-color: #fffff1;
+  height: 400px;
+  width: 800px;
+  border: 1px solid #1e202a;
+  border-radius: 50px;
 }
 
 .menu {
@@ -185,7 +206,6 @@ a {
   border-radius: 50%;
   display: inline-block;
 }
-
 
 .saveButton {
   font-size: 24px;
