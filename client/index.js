@@ -87,6 +87,8 @@ const sortSentencesRandomly = (sentences) => {
 };
 
 const createEpisode = () => {
+  window.location.hash = '';
+
   episodesList.classList.add('hidden');
   episodeWrapper.classList.remove('hidden');
   saveEpisodeButton.classList.remove('hidden');
@@ -133,8 +135,11 @@ const createEpisode = () => {
     title.innerHTML += episodeNameNode;
   }
 
-  const width = wordsWrapper.clientWidth;
-  const isMobile = width <= 768;
+  const isMobile = window.matchMedia(
+    'only screen and (max-width: 1024px) '
+  ).matches;
+
+  console.log({ isMobile });
   if (isMobile) {
     scrollTo('episodeWrapper');
   }
