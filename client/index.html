@@ -10,54 +10,78 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="menu">
-            <h1>equipoMotor. TXT — máquina de ficción</h1>
-            <ul class="menu--list">
-                <li class="menu--list__item">
-                    <button class="menu--list__item-button" onclick="displayInfo('equipoMotor')">
-                        → qué fue equipoMotor TXT 2020
-                    </button>
-                </li>
-                <li class="menu--list__item">
-                    <button class="menu--list__item-button" onclick="displayInfo('episodes')">
-                        → qué son los episodios
-                    </button>
-                </li>
-                <li class="menu--list__item">
-                    <button class="menu--list__item-button" onclick="displayInfo('instructions')">
-                        → cómo crear un episodio
-                    </button>
-                </li>
-                <li class="menu--list__item">
-                    <button class="menu--list__item-button" onclick="getEpisodes()">
-                        → ver episodios creados
-                    </button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <ul id="wordsWrapper" onclick="unselectMenuItems()"></ul>
-        <article class="rightSide" onclick="unselectMenuItems()">
-            <div id="episodeWrapper">
-                <div class="hidden" id="loader"></div>
-                <div class="hidden" id="successMessage">Tu episodio ya es parte del archivo de la Máquina de ficción de
-                    equipoMotor. <br>Puedes ver todos los episodios haciendo clic <button onclick="getEpisodes()"
-                        class="button--inline">
-                        aquí.
-                    </button></div>
-                <h4 id="title" class="episode__title"></h4>
-                <p id="episode" class="episode">
-                </p>
-                <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">→ guardar
-                    episodio</button>
+    <div id="popup" class="popup-overlay">
+        <div class="popup">
+            <div class="popup-header"> <span class="popup-header--title">equipoMotor. TXT — máquina de ficción</span>
+                <button class="popup-button" onclick="closePopup()">x</button>
             </div>
-            <ul id="episodesList" class="hidden episodesList">
-            </ul>
-            <div id="aboutWrapper"></div>
-        </article>
-    </main>
+            <div class="popup-content">
+                <img class="popup-image" src="img/words-selection.gif" />
+                <div class="popup-text">
+                    Esta web es una máquina de ficción inspirada en los tapices de la obra <a
+                        href="https://www.museoreinasofia.es/coleccion/obra/txt-engine-wandering-words-txt-motor-palabras-errantes"
+                        target="_blank">TXT</a> de
+                    Ana
+                    Torfs y creada por equipoMotor. <br />
+                    <br />
+                    Puedes crear un
+                    nuevo episodio de la exposición Vasos Comunicantes del Museo Reina Sofía seleccionando tres palabras
+                    del listado.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header class="header">
+            <nav class="menu">
+                <h1>equipoMotor. TXT — máquina de ficción</h1>
+                <ul class="menu--list">
+                    <li class="menu--list__item">
+                        <button class="menu--list__item-button" onclick="displayInfo('equipoMotor')">
+                            → qué fue equipoMotor TXT 2020
+                        </button>
+                    </li>
+                    <li class="menu--list__item">
+                        <button class="menu--list__item-button" onclick="displayInfo('episodes')">
+                            → qué son los episodios
+                        </button>
+                    </li>
+                    <li class="menu--list__item">
+                        <button class="menu--list__item-button" onclick="displayInfo('instructions')">
+                            → cómo crear un episodio
+                        </button>
+                    </li>
+                    <li class="menu--list__item">
+                        <button class="menu--list__item-button" onclick="getEpisodes()">
+                            → ver episodios creados
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <ul id="wordsWrapper" onclick="unselectMenuItems()"></ul>
+            <article class="rightSide" onclick="unselectMenuItems()">
+                <div id="episodeWrapper">
+                    <div class="hidden" id="loader"></div>
+                    <div class="hidden" id="successMessage">Tu episodio ya es parte del archivo de la Máquina de ficción
+                        de
+                        equipoMotor. <br>Puedes ver todos los episodios haciendo clic <button onclick="getEpisodes()"
+                            class="button--inline">
+                            aquí.
+                        </button></div>
+                    <h4 id="title" class="episode__title"></h4>
+                    <p id="episode" class="episode">
+                    </p>
+                    <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">→ guardar
+                        episodio</button>
+                </div>
+                <ul id="episodesList" class="hidden episodesList">
+                </ul>
+                <div id="aboutWrapper"></div>
+            </article>
+        </main>
+    </div>
     <script type="text/javascript" src="./services.js"></script>
     <script type="text/javascript" src="./helpers.js"></script>
     <script type="text/javascript" src="./sentences.js"></script>
