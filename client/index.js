@@ -197,7 +197,8 @@ const addWord = (word) => {
 };
 
 const createWordsNodes = () => {
-  wordsAvailable.forEach((word) => {
+  const shuffledWords = shuffleWords(wordsAvailable);
+  shuffledWords.forEach((word) => {
     const li = document.createElement('li');
     li.innerText = word;
     li.onclick = () => addWord(word);

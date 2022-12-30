@@ -91,7 +91,7 @@ a {
 .popup {
   position: absolute;
   background-color: #fffff1;
-  height: 400px;
+  height: 430px;
   width: 800px;
   border: 1px solid #1e202a;
   border-radius: 50px;
@@ -105,7 +105,8 @@ a {
 }
 
 .popup-image {
-  width: 40%;
+  width: 30%;
+  margin: 10px;
 }
 
 .menu {
@@ -250,6 +251,9 @@ a {
   }
   .popup-header--title {
     display: none;
+  }
+  .popup-image {
+    width: 140px;
   }
   .menu,
   .menu--list {
