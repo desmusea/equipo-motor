@@ -3,6 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Máquina de ficción creada por equipoMotor inspirada en los tapices de la obra TXT de Ana Torfs. Puedes crear un
+    nuevo episodio de la exposición Vasos Comunicantes del Museo Reina Sofía seleccionando tres palabras
+    del listado.">
+    <meta name="keywords" content="Museo, equipoMotor, Desmusea, TXT, Ana,Torfs, Reina, Sofía, MNCARS, eduación">
+    <meta name="author" content="John Doe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>equipoMotor. TXT — máquina de ficción</title>
@@ -16,7 +21,10 @@
                 <button class="popup-button" onclick="closePopup()">x</button>
             </div>
             <div class="popup-content">
-                <img class="popup-image" src="img/words-selection.gif" />
+                <video class="popup-animation" width="320" height="240" loop autoplay muted>
+                    <source src="img/words-selection.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="popup-text">
                     Esta web es una máquina de ficción inspirada en los tapices de la obra <a
                         href="https://www.museoreinasofia.es/coleccion/obra/txt-engine-wandering-words-txt-motor-palabras-errantes"
@@ -70,11 +78,12 @@
                             class="button--inline">
                             aquí.
                         </button></div>
-                    <h4 id="title" class="episode__title"></h4>
-                    <p id="episode" class="episode">
-                    </p>
-                    <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">→ guardar
-                        episodio</button>
+                    <h2 id="title" class="episode__title">
+                        </h4>
+                        <p id="episode" class="episode">
+                        </p>
+                        <button id="saveEpisodeButton" onclick="postEpisode()" class="hidden saveButton">→ guardar
+                            episodio</button>
                 </div>
                 <ul id="episodesList" class="hidden episodesList">
                 </ul>
