@@ -10,6 +10,7 @@ const menuItems = document.querySelectorAll('.menu--list__item-button');
 const loader = document.querySelector('#loader');
 const successMessage = document.querySelector('#successMessage');
 const aboutWrapper = document.querySelector('#aboutWrapper');
+const popUp = document.querySelector('#popup');
 
 let episodesTitle;
 let finalText;
@@ -23,6 +24,7 @@ const wordsAvailable = Object.keys(words);
 let selectedWords = [];
 
 const scrollTo = (hash) => (location.hash = '#' + hash);
+const closePopup = () => popUp.classList.add('hidden');
 
 const toggleMenuItemsStatus = (id) => {
   switch (id) {
@@ -87,6 +89,8 @@ const sortSentencesRandomly = (sentences) => {
 };
 
 const createEpisode = () => {
+  window.location.hash = '';
+
   episodesList.classList.add('hidden');
   episodeWrapper.classList.remove('hidden');
   saveEpisodeButton.classList.remove('hidden');
@@ -133,8 +137,11 @@ const createEpisode = () => {
     title.innerHTML += episodeNameNode;
   }
 
-  const width = wordsWrapper.clientWidth;
-  const isMobile = width <= 768;
+  const isMobile = window.matchMedia(
+    'only screen and (max-width: 1024px) '
+  ).matches;
+
+  console.log({ isMobile });
   if (isMobile) {
     scrollTo('episodeWrapper');
   }
@@ -190,7 +197,8 @@ const addWord = (word) => {
 };
 
 const createWordsNodes = () => {
-  wordsAvailable.forEach((word) => {
+  const shuffledWords = shuffleWords(wordsAvailable);
+  shuffledWords.forEach((word) => {
     const li = document.createElement('li');
     li.innerText = word;
     li.onclick = () => addWord(word);
