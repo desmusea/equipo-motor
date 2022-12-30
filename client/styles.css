@@ -104,8 +104,9 @@ a {
   width: 100%;
 }
 
-.popup-image {
-  width: 30%;
+.popup-animation {
+  width: 240px;
+  height: 220px;
   margin: 10px;
 }
 
@@ -252,9 +253,7 @@ a {
   .popup-header--title {
     display: none;
   }
-  .popup-image {
-    width: 140px;
-  }
+  
   .menu,
   .menu--list {
     flex-direction: column;
