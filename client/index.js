@@ -16,12 +16,20 @@ let episodesTitle;
 let finalText;
 let episodeName;
 let displayedInfoId;
+let showOnboardingPopUp;
 
 const { start, end, experiences, words } = sentences;
 const { equipoMotor, instructions, episodes } = about;
 const wordsAvailable = Object.keys(words);
 
 let selectedWords = [];
+const setShowOnboardingPopUp = () => {
+  if (localStorage.getItem('showOnBoardingPopUp') === 'false') {
+    popUp.classList.add('hidden');
+  } else {
+    localStorage.setItem('showOnBoardingPopUp', false);
+  }
+};
 
 const scrollTo = (hash) => (location.hash = '#' + hash);
 const closePopup = () => popUp.classList.add('hidden');
@@ -252,7 +260,7 @@ const postEpisode = () => {
   saveEpisodeButton.classList.add('hidden');
   title.innerHTML = null;
   unselectWords();
-  saveEpisode('https://equipomotor.onrender.com/episodes', {
+  saveEpisode('http://localhost:3000/episodes', {
     text: finalText,
     title: episodesTitle,
   }).then(() => {
@@ -261,4 +269,5 @@ const postEpisode = () => {
   });
 };
 
+setShowOnboardingPopUp();
 createWordsNodes();
