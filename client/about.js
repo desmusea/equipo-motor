@@ -1,5 +1,5 @@
 const about = {
-  equipoMotor: `La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor target="_blank"">equipoMotor</a>,
+  equipoMotor: `La primera edición de <a href="https://www.museoreinasofia.es/actividades/equipomotor" target="_blank">equipoMotor</a>,
     equipoMotor.TXT
     convocó a las personas que formaron parte de algunas de las Comunidades del Museo Reina
     Sofía entre los años 2019 y 2022 para recorrer <a href="https://www.museoreinasofia.es/coleccion" target="_blank">Vasos Comunicantes</a>, la reordenación de la
