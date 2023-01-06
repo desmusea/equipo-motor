@@ -11,7 +11,7 @@ const sentences = {
     'He venido al Reina Sofía para conocer su Colección Permanente.',
     'Salto sobre un trampolín, y acabo misteriosamente en el interior del Reina Sofía.',
     'Tras leer un polémico hilo de Twitter, he decidido acercarme al Reina Sofía a ver si es tan interesante como dicen.',
-    'He leído en la prensa que el Reina Sofía organizó su Colección en ocho Episodios, así que me acerco a mirar.',
+    'He leído en la prensa que el Reina Sofía organizó su Colección en ocho episodios, así que me acerco a mirar.',
     'Acabo de aterrizar en este extraño planeta, y he pensado empezar mi visita por el Reina Sofía.',
     'He entrado al Reina Sofía para llevarme una obra.',
     'He llegado al Reina Sofía siguiendo un pájaro extraño.',
