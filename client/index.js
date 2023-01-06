@@ -260,7 +260,7 @@ const postEpisode = () => {
   saveEpisodeButton.classList.add('hidden');
   title.innerHTML = null;
   unselectWords();
-  saveEpisode('http://localhost:3000/episodes', {
+  saveEpisode('https://equipomotor.onrender.com/episodes', {
     text: finalText,
     title: episodesTitle,
   }).then(() => {
