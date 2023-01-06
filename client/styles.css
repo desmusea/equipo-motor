@@ -91,7 +91,7 @@ a {
 .popup {
   position: absolute;
   background-color: #fffff1;
-  height: 430px;
+  height: 450px;
   width: 800px;
   border: 1px solid #1e202a;
   border-radius: 50px;
@@ -105,7 +105,7 @@ a {
 }
 
 .popup-animation {
-  width: 240px;
+  width: 350px;
   height: 220px;
   margin: 10px;
 }
@@ -155,6 +155,7 @@ a {
 .links {
   margin-right: 10px;
   padding-bottom: 20px;
+  display: flex;
 }
 
 .links__item {
@@ -243,17 +244,24 @@ a {
     height: 100%;
     overflow-x: hidden;
   }
+
   .popup {
     width: 75%;
     height: auto;
   }
+
+  .popup-animation {
+    width: 250px;
+  }
+
   .popup-header {
     justify-content: flex-end;
   }
+
   .popup-header--title {
     display: none;
   }
-  
+
   .menu,
   .menu--list {
     flex-direction: column;
