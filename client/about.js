@@ -1,5 +1,5 @@
 const about = {
-  equipoMotor: `<a href="https://www.museoreinasofia.es/actividades/equipomotor" target="_blank">equipoMotor</a>,
+  equipoMotor: `<a href="https://www.museoreinasofia.es/actividades/equipomotor" target="_blank">equipoMotor</a>
     es una comunidad compuesta por las participantes de los proyectos de Comunidades del Área de Educación del Museo Reina Sofía (equipo1517, equipo1821, equipoM y GAS)
     <br />
     <br />
