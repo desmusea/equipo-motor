@@ -1,4 +1,4 @@
-const sentences = {​​
+const sentences = {
   start: [
     'Decido pasear por el Reina Sofía, sin rumbo ni dirección específica.',
     'Accedo al Reina Sofía a través de una pequeña puerta.',
@@ -110,7 +110,8 @@ const sentences = {​​
         key: 'pinturas',
       },
       {
-        sentence: 'Un enorme metrónomo con un ojo marca el tiempo al final de un pasillo.',
+        sentence:
+          'Un enorme metrónomo con un ojo marca el tiempo al final de un pasillo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/indestructible-object-objeto-indestructible',
         key: 'metrónomo',
       },
