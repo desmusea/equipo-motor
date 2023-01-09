@@ -1,4 +1,4 @@
-const sentences = {
+const sentences = {​
   start: [
     'Decido pasear por el Reina Sofía, sin rumbo ni dirección específica.',
     'Accedo al Reina Sofía a través de una pequeña puerta.',
@@ -6,7 +6,7 @@ const sentences = {
     'Me he comprado un nuevo videojuego en el que paseas virtualmente por el Reina Sofía. Voy a probarlo.',
     'He estado haciendo cola para el horario gratuito del Reina Sofía, y ya estoy dentro.',
     'Me cuelo entre la multitud que accede al Reina Sofía.',
-    'Soy el director del Reina Sofía, pero hoy voy a pasear por aquí como nunca antes hubiera estado dentro.',
+    'Soy el director del Reina Sofía, pero hoy voy a pasear por aquí como si nunca antes hubiera estado dentro.',
     'Entro en el Reina Sofía para olvidar que mi novio me ha dejado.',
     'He venido al Reina Sofía para conocer su Colección Permanente.',
     'Salto sobre un trampolín, y acabo misteriosamente en el interior del Reina Sofía.',
@@ -110,8 +110,7 @@ const sentences = {
         key: 'pinturas',
       },
       {
-        sentence:
-          'Un enorme metrónomo con un ojo marca el tiempo al final de un pasillo.',
+        sentence: 'Un enorme metrónomo con un ojo marca el tiempo al final de un pasillo.',
         url: 'https://www.museoreinasofia.es/coleccion/obra/indestructible-object-objeto-indestructible',
         key: 'metrónomo',
       },
@@ -1037,7 +1036,7 @@ const sentences = {
       },
       {
         sentence:
-          'Me siento en uno de los bancos del museo, y recorro con la mirada la separación entre las piedras de sus muros.',
+          'Me siento en uno de los bancos del museo, y sigo con la mirada la separación entre las piedras de sus muros.',
         url: 'https://www.museoreinasofia.es/museo/historia',
         key: 'bancos',
       },
