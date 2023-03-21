@@ -123,9 +123,6 @@ a {
   max-width: 700px;
 }
 
-.logo svg path {
-  fill: green !important;
-}
 
 .menu {
   display: flex;
@@ -317,9 +314,6 @@ a {
     padding-right: 0;
   }
 
-  .header-logo {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
