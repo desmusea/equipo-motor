@@ -110,6 +110,22 @@ a {
   margin: 10px;
 }
 
+.header {
+  padding: 20px 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-logo {
+  display: flex;
+}
+
+.footer-logo {
+  display: none;
+}
+
 .menu {
   display: flex;
 }
@@ -136,11 +152,6 @@ a {
 .selected,
 .menu--list__item-button:hover {
   text-decoration: underline;
-}
-
-.header {
-  padding: 20px 0;
-  height: 80px;
 }
 
 .button--inline {
@@ -303,6 +314,15 @@ a {
 
   .episodesList {
     padding-right: 0;
+  }
+
+  .header-logo {
+    display: none;
+  }
+
+  .footer-logo {
+    display: flex;
+    margin: 10px;
   }
 }
 
