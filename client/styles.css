@@ -118,12 +118,13 @@ a {
   align-items: flex-start;
 }
 
-.header-logo {
-  display: flex;
+.logo {
+  margin: 20px 10px;
+  max-width: 700px;
 }
 
-.footer-logo {
-  display: none;
+.logo svg path {
+  fill: green !important;
 }
 
 .menu {
@@ -318,11 +319,6 @@ a {
 
   .header-logo {
     display: none;
-  }
-
-  .footer-logo {
-    display: flex;
-    margin: 20px 10px;
   }
 }
 
